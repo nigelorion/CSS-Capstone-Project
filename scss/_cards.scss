@@ -1,0 +1,9 @@
+.cards {
+  font-size: 1.5em;
+  color: rgb(110, 154, 153);
+  display: flex;
+  flex-wrap: wrap;
+  &__item {
+    flex: 1;
+  }
+}
