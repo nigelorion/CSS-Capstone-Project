@@ -10,13 +10,22 @@
   font-family: 'Quattrocento', serif;
   &__logo {
     position: absolute;
-    top: 50%;
-    right: 0;
-    transform: translate(-50%);
+    top: 40%;
+    margin-right: 5%;
     font-size: 5em;
     text-align: right;
+    transition: all ease-in-out 500ms;
+    &:hover > &__hover {
+      opacity: 1;
+    }
     &--mod {
       color: rgb(130, 177, 198);
+    }
+    &__hover {
+      font-size: .3em;
+      text-align: left;
+      margin: 10%;
+      opacity: 0;
     }
   }
   &__overlay {
@@ -30,8 +39,8 @@
     position: absolute;
     display: flex;
     justify-content: space-around;
-    top: 142px;
-    left: 142px;
+    top: 15%;
+    left: 15%;
     font-size: 2.5em;
     color: rgba(92, 92, 92, 0.68);
     transform: rotate(-29deg);
@@ -39,7 +48,7 @@
       flex: 1;
       margin: 5%;
       font-size: 1.5em;
-      transition: all ease-in-out 300ms;
+      transition: all ease-in-out 370ms;
       &:hover {
         color: rgba(156, 243, 246, 0.76);
       }
@@ -60,7 +69,7 @@
         opacity: 1;
         transform: rotate(29deg);
         & li {
-          margin-bottom: 15px;
+          margin-bottom: 25px;
         }
       }
     }
@@ -69,7 +78,7 @@
 
 
 li {
-  transition: margin ease-in-out 350ms;
+  transition: margin ease-in-out 700ms;
   &:hover {
     cursor: pointer;
   }

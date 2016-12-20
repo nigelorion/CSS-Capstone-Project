@@ -1,4 +1,10 @@
-.cards {
+.tape {
+  background-image: url("../img/tape.jpg");
+  height: 900px;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   font-size: 1.5em;
   color: rgb(110, 154, 153);
   display: flex;
@@ -6,11 +12,20 @@
   justify-content: space-around;
 
   &__item {
-    flex-basis: 50%;
-
+    flex-basis: 40%;
+    padding: 4%;
     transition: all ease-in-out 350ms;
     &:hover {
       color: rgb(187, 112, 0);
     }
   }
+}
+
+.shop {
+  background-image: url("../img/hoodie-1.jpg");
+  background-position: right;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 900px;
+
 }

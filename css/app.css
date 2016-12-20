@@ -52,13 +52,20 @@ table {
   font-family: 'Quattrocento', serif; }
   .header__logo {
     position: absolute;
-    top: 50%;
-    right: 0;
-    transform: translate(-50%);
+    top: 40%;
+    margin-right: 5%;
     font-size: 5em;
-    text-align: right; }
+    text-align: right;
+    transition: all ease-in-out 500ms; }
+    .header__logo:hover > .header__logo__hover {
+      opacity: 1; }
     .header__logo--mod {
       color: #82b1c6; }
+    .header__logo__hover {
+      font-size: .3em;
+      text-align: left;
+      margin: 10%;
+      opacity: 0; }
   .header__overlay {
     background-color: rgba(0, 0, 0, 0.7);
     z-index: -98;
@@ -69,8 +76,8 @@ table {
     position: absolute;
     display: flex;
     justify-content: space-around;
-    top: 142px;
-    left: 142px;
+    top: 15%;
+    left: 15%;
     font-size: 2.5em;
     color: rgba(92, 92, 92, 0.68);
     transform: rotate(-29deg); }
@@ -78,7 +85,7 @@ table {
       flex: 1;
       margin: 5%;
       font-size: 1.5em;
-      transition: all ease-in-out 300ms; }
+      transition: all ease-in-out 370ms; }
       .header__nav__btn:hover {
         color: rgba(156, 243, 246, 0.76); }
       .header__nav__btn--sub {
@@ -95,23 +102,36 @@ table {
         opacity: 1;
         transform: rotate(29deg); }
         .header__nav__btn:hover > .header__nav__btn--sub li {
-          margin-bottom: 15px; }
+          margin-bottom: 25px; }
 
 li {
-  transition: margin ease-in-out 350ms; }
+  transition: margin ease-in-out 700ms; }
   li:hover {
     cursor: pointer; }
 
-.cards {
+.tape {
+  background-image: url("../img/tape.jpg");
+  height: 900px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   font-size: 1.5em;
   color: #6e9a99;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around; }
-  .cards__item {
-    flex-basis: 50%;
+  .tape__item {
+    flex-basis: 40%;
+    padding: 4%;
     transition: all ease-in-out 350ms; }
-    .cards__item:hover {
+    .tape__item:hover {
       color: #bb7000; }
+
+.shop {
+  background-image: url("../img/hoodie-1.jpg");
+  background-position: right;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 900px; }
 
 /*# sourceMappingURL=app.css.map */
