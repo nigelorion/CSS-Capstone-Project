@@ -1,6 +1,6 @@
 .tape {
   background-image: url("../img/tape.jpg");
-  height: 900px;
+  min-height: 100vh;
 
   background-position: center;
   background-repeat: no-repeat;
@@ -26,6 +26,5 @@
   background-position: right;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 900px;
-
+  min-height: 100vh;
 }
