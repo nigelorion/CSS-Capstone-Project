@@ -1,3 +1,7 @@
+.container {
+  max-width: 1500px;
+  margin: 0 auto; }
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -62,29 +66,32 @@ a:active {
   background-position: center;
   position: relative;
   font-family: 'Quattrocento', serif; }
+  .header__click {
+    text-decoration: none;
+    color: white; }
+    .header__click:hover {
+      text-decoration: none;
+      color: rgba(10, 119, 221, 0.48); }
   .header__logo {
     position: absolute;
     top: 40%;
-    display: flex;
-    flex-direction: column; }
+    right: 0;
+    display: flex; }
     .header__logo__about {
       font-size: 1.6em;
-      text-align: left;
-      margin: 10%;
-      opacity: 0;
-      transition: 500ms all ease-in-out; }
+      position: absolute;
+      width: 600px;
+      top: 43%;
+      left: 30%;
+      display: none; }
     .header__logo__title {
       align-self: flex-end;
-      font-size: 5em;
+      font-size: 6em;
       text-align: right;
-      flex-basis: 40%;
+      flex-basis: 60%;
       margin-right: 5%; }
       .header__logo__title--mod {
         color: rgba(12, 199, 249, 0.49); }
-      .header__logo__title:hover {
-        color: rgba(12, 199, 249, 0.3); }
-      .header__logo__title:hover + .header__logo__about {
-        opacity: 1; }
   .header__overlay {
     background-color: rgba(0, 0, 0, 0.7);
     z-index: -98;
@@ -92,16 +99,17 @@ a:active {
     width: 100%; }
   .header__nav {
     height: 400px;
+    width: 40%;
     position: absolute;
     display: flex;
-    justify-content: space-around;
-    top: 15%;
-    left: 15%;
+    justify-content: space-between;
+    top: 25%;
+    left: 14%;
     font-size: 2.5em;
     color: rgba(92, 92, 92, 0.68);
-    transform: rotate(-29deg); }
+    transform: rotate(-30deg); }
     .header__nav__btn {
-      flex: 1;
+      flex-grow: 0;
       margin: 5%;
       font-size: 1.5em;
       transition: all ease-in-out 370ms; }
@@ -109,7 +117,6 @@ a:active {
         color: rgba(156, 243, 246, 0.76); }
       .header__nav__btn--sub {
         font-size: .5em;
-        opacity: 0;
         margin-top: 50px;
         text-align: center; }
         .header__nav__btn--sub li a {
@@ -120,12 +127,14 @@ a:active {
             color: inherit; }
         .header__nav__btn--sub li a:hover {
           color: rgba(254, 254, 254, 0.82);
-          text-decoration: line-through; }
+          text-decoration: line-through;
+          position: relative; }
       .header__nav__btn--sub {
-        transition: all ease-in-out 350ms; }
+        transition: all ease-in-out 350ms;
+        opacity: 0; }
       .header__nav__btn:hover > .header__nav__btn--sub {
         opacity: 1;
-        transform: rotate(29deg); }
+        transform: rotate(30deg); }
         .header__nav__btn:hover > .header__nav__btn--sub li {
           margin-bottom: 35px; }
 
@@ -153,10 +162,243 @@ li {
       color: #bb7000; }
 
 .shop {
-  background-image: url("../img/hoodie-1.jpg");
-  background-position: right;
-  background-size: cover;
-  background-repeat: no-repeat;
-  min-height: 100vh; }
+  display: flex;
+  height: 100%;
+  width: 100%;
+  font-family: 'Quattrocento', serif; }
+
+.hoodies {
+  flex-basis: 50%;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; }
+  .hoodies__title {
+    font-size: 5em;
+    flex-basis: 90%;
+    order: 5;
+    text-align: center;
+    margin-top: 20px; }
+  .hoodies__btn {
+    order: 6;
+    width: 200px;
+    height: 70px;
+    color: white;
+    font-size: 2em;
+    background-color: rgba(105, 217, 170, 0.76);
+    display: flex;
+    transition: all ease-in-out 200ms; }
+    .hoodies__btn p {
+      margin: auto; }
+    .hoodies__btn:hover {
+      color: rgba(105, 217, 170, 0.46);
+      background-color: rgba(194, 188, 188, 0.12);
+      cursor: pointer; }
+  .hoodies__item:nth-of-type(3) {
+    background-image: url(../img/hoodie-1.jpg);
+    background-position: center right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all ease-in-out 200ms;
+    opacity: .5;
+    font-size: 3em;
+    text-align: center;
+    color: rgba(217, 172, 105, 0.76);
+    flex-basis: 32%;
+    margin: 2%;
+    min-height: 365px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
+    .hoodies__item:nth-of-type(3):hover {
+      opacity: 1;
+      color: rgba(217, 217, 217, 0.83);
+      flex-basis: 44%; }
+  .hoodies__item:nth-of-type(4) {
+    background-image: url(../img/hoodie-1.jpg);
+    background-position: center right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all ease-in-out 200ms;
+    opacity: .5;
+    font-size: 3em;
+    text-align: center;
+    color: rgba(217, 172, 105, 0.76);
+    flex-basis: 32%;
+    margin: 2%;
+    min-height: 365px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
+    .hoodies__item:nth-of-type(4):hover {
+      opacity: 1;
+      color: rgba(217, 217, 217, 0.83);
+      flex-basis: 44%; }
+  .hoodies__item:nth-of-type(5) {
+    background-image: url(../img/hoodie-1.jpg);
+    background-position: center right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all ease-in-out 200ms;
+    opacity: .5;
+    font-size: 3em;
+    text-align: center;
+    color: rgba(217, 172, 105, 0.76);
+    flex-basis: 32%;
+    margin: 2%;
+    min-height: 365px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
+    .hoodies__item:nth-of-type(5):hover {
+      opacity: 1;
+      color: rgba(217, 217, 217, 0.83);
+      flex-basis: 44%; }
+  .hoodies__item:nth-of-type(6) {
+    background-image: url(../img/hoodie-1.jpg);
+    background-position: center right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all ease-in-out 200ms;
+    opacity: .5;
+    font-size: 3em;
+    text-align: center;
+    color: rgba(217, 172, 105, 0.76);
+    flex-basis: 32%;
+    margin: 2%;
+    min-height: 365px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
+    .hoodies__item:nth-of-type(6):hover {
+      opacity: 1;
+      color: rgba(217, 217, 217, 0.83);
+      flex-basis: 44%; }
+
+.shirts {
+  flex-basis: 50%;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; }
+  .shirts__title {
+    font-size: 5em;
+    flex-basis: 90%;
+    order: 5;
+    text-align: center;
+    margin-top: 20px; }
+  .shirts__btn {
+    order: 6;
+    width: 200px;
+    height: 70px;
+    color: white;
+    font-size: 2em;
+    background-color: rgba(217, 172, 105, 0.76);
+    display: flex;
+    transition: all ease-in-out 200ms; }
+    .shirts__btn p {
+      margin: auto; }
+    .shirts__btn:hover {
+      color: rgba(217, 172, 105, 0.76);
+      background-color: rgba(194, 188, 188, 0.12);
+      cursor: pointer; }
+  .shirts__item:nth-of-type(3) {
+    background-image: url(../img/hoodie-2.jpg);
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: 200ms all ease-in-out 200ms;
+    opacity: .5;
+    font-size: 3em;
+    text-align: center;
+    color: rgba(105, 217, 170, 0.76);
+    flex-basis: 32%;
+    margin: 2%;
+    min-height: 365px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
+    .shirts__item:nth-of-type(3):hover {
+      opacity: 1;
+      color: rgba(217, 217, 217, 0.83);
+      flex-basis: 44%;
+      justify-content: center; }
+  .shirts__item:nth-of-type(4) {
+    background-image: url(../img/hoodie-2.jpg);
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: 200ms all ease-in-out 200ms;
+    opacity: .5;
+    font-size: 3em;
+    text-align: center;
+    color: rgba(105, 217, 170, 0.76);
+    flex-basis: 32%;
+    margin: 2%;
+    min-height: 365px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
+    .shirts__item:nth-of-type(4):hover {
+      opacity: 1;
+      color: rgba(217, 217, 217, 0.83);
+      flex-basis: 44%;
+      justify-content: center; }
+  .shirts__item:nth-of-type(5) {
+    background-image: url(../img/hoodie-2.jpg);
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: 200ms all ease-in-out 200ms;
+    opacity: .5;
+    font-size: 3em;
+    text-align: center;
+    color: rgba(105, 217, 170, 0.76);
+    flex-basis: 32%;
+    margin: 2%;
+    min-height: 365px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
+    .shirts__item:nth-of-type(5):hover {
+      opacity: 1;
+      color: rgba(217, 217, 217, 0.83);
+      flex-basis: 44%;
+      justify-content: center; }
+  .shirts__item:nth-of-type(6) {
+    background-image: url(../img/hoodie-2.jpg);
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: 200ms all ease-in-out 200ms;
+    opacity: .5;
+    font-size: 3em;
+    text-align: center;
+    color: rgba(105, 217, 170, 0.76);
+    flex-basis: 32%;
+    margin: 2%;
+    min-height: 365px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
+    .shirts__item:nth-of-type(6):hover {
+      opacity: 1;
+      color: rgba(217, 217, 217, 0.83);
+      flex-basis: 44%;
+      justify-content: center; }
+
+.home__top {
+  position: fixed;
+  text-decoration: none;
+  left: 20px;
+  top: 100px;
+  display: none;
+  font-size: 10em;
+  color: rgba(56, 56, 56, 0.72); }
+  .home__top--link:hover {
+    color: rgba(90, 141, 177, 0.51);
+    text-decoration: none; }
+  .home__top--link:visited {
+    color: inherit; }
 
 /*# sourceMappingURL=app.css.map */

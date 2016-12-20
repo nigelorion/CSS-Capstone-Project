@@ -8,32 +8,35 @@
   background-position: center;
   position: relative;
   font-family: 'Quattrocento', serif;
+  &__click {
+    text-decoration: none;
+    color: white;
+    &:hover {
+      text-decoration: none;
+      color: rgba(10, 119, 221, 0.48);
+    }
+  }
   &__logo {
     position: absolute;
     top: 40%;
+    right: 0;
     display: flex;
-    flex-direction: column;
     &__about {
       font-size: 1.6em;
-      text-align: left;
-      margin: 10%;
-      opacity: 0;
-      transition: 500ms all ease-in-out;
+      position: absolute;
+      width: 600px;
+      top: 43%;
+      left: 30%;
+      display: none;
     }
     &__title {
       align-self: flex-end;
-      font-size: 5em;
+      font-size: 6em;
       text-align: right;
-      flex-basis: 40%;
+      flex-basis: 60%;
       margin-right: 5%;
       &--mod {
         color: rgba(12, 199, 249, 0.49);
-      }
-      &:hover {
-        color: rgba(12, 199, 249, 0.3);
-      }
-      &:hover + .header__logo__about {
-        opacity: 1;
       }
     }
   }
@@ -45,16 +48,17 @@
   }
   &__nav {
     height: 400px;
+    width: 40%;
     position: absolute;
     display: flex;
-    justify-content: space-around;
-    top: 15%;
-    left: 15%;
+    justify-content: space-between;
+    top: 25%;
+    left: 14%;
     font-size: 2.5em;
     color: rgba(92, 92, 92, 0.68);
-    transform: rotate(-29deg);
+    transform: rotate(-30deg);
     &__btn {
-      flex: 1;
+      flex-grow: 0;
       margin: 5%;
       font-size: 1.5em;
       transition: all ease-in-out 370ms;
@@ -63,8 +67,6 @@
       }
       &--sub {
         font-size: .5em;
-        opacity: 0;
-        // transition: all ease-in-out 350ms;
         margin-top: 50px;
         text-align: center;
         & li a {
@@ -78,14 +80,16 @@
         & li a:hover {
           color: rgba(254, 254, 254, 0.82);
           text-decoration: line-through;
+          position: relative;
         }
       }
       &--sub {
         transition: all ease-in-out 350ms;
+        opacity: 0;
       }
       &:hover > &--sub {
         opacity: 1;
-        transform: rotate(29deg);
+        transform: rotate(30deg);
         & li {
           margin-bottom: 35px;
         }

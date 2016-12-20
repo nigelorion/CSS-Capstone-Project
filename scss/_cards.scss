@@ -22,9 +22,125 @@
 }
 
 .shop {
-  background-image: url("../img/hoodie-1.jpg");
-  background-position: right;
-  background-size: cover;
-  background-repeat: no-repeat;
-  min-height: 100vh;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  font-family: 'Quattrocento', serif;
+}
+
+.hoodies {
+  flex-basis: 50%;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  &__title {
+    font-size: 5em;
+    flex-basis: 90%;
+    order: 5;
+    text-align: center;
+    margin-top: 20px;
+  }
+  &__btn {
+    order: 6;
+    width: 200px;
+    height: 70px;
+    color: rgb(255, 255, 255);
+    font-size: 2em;
+    background-color: rgba(105, 217, 170, 0.76);
+    display: flex;
+    transition: all ease-in-out 200ms;
+    & p {
+      margin: auto;
+    }
+    &:hover {
+      color: rgba(105, 217, 170, 0.46);
+      background-color: rgba(194, 188, 188, 0.12);
+      cursor: pointer;
+    }
+
+  }
+  @for $i from 3 through 6 {
+    &__item:nth-of-type(#{$i}) {
+      background-image: url(../img/hoodie-1.jpg);
+      background-position: center right;
+      background-repeat: no-repeat;
+      background-size: cover;
+      transition: all ease-in-out 200ms;
+      opacity: .5;
+      font-size: 3em;
+      text-align: center;
+      color: rgba(217, 172, 105, 0.76);
+      flex-basis: 32%;
+      margin: 2%;
+      min-height: 365px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      &:hover {
+        opacity: 1;
+        color: rgba(217, 217, 217, 0.83);
+        flex-basis: 44%;
+      }
+    }
+  }
+}
+
+.shirts {
+  flex-basis: 50%;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  &__title {
+    font-size: 5em;
+    flex-basis: 90%;
+    order: 5;
+    text-align: center;
+    margin-top: 20px;
+  }
+  &__btn {
+    order: 6;
+    width: 200px;
+    height: 70px;
+    color: rgb(255, 255, 255);
+    font-size: 2em;
+    background-color: rgba(217, 172, 105, 0.76);
+    display: flex;
+    transition: all ease-in-out 200ms;
+    & p {
+      margin: auto;
+    }
+    &:hover {
+      color: rgba(217, 172, 105, 0.76);
+      background-color: rgba(194, 188, 188, 0.12);
+      cursor: pointer;
+    }
+
+  }
+  @for $i from 3 through 6 {
+    &__item:nth-of-type(#{$i}) {
+      background-image: url(../img/hoodie-2.jpg);
+      background-position: left;
+      background-repeat: no-repeat;
+      background-size: cover;
+      transition: 200ms all ease-in-out 200ms;
+      opacity: .5;
+      font-size: 3em;
+      text-align: center;
+      color: rgba(105, 217, 170, 0.76);
+      flex-basis: 32%;
+      margin: 2%;
+      min-height: 365px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      &:hover {
+        opacity: 1;
+        color: rgba(217, 217, 217, 0.83);
+        flex-basis: 44%;
+        justify-content: center;
+      }
+    }
+  }
 }
