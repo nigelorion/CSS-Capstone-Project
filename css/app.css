@@ -1,4 +1,5 @@
 .container {
+  font-family: 'Quattrocento', serif;
   max-width: 1500px;
   margin: 0 auto; }
 
@@ -62,7 +63,7 @@ a:hover {
   background-repeat: no-repeat;
   background-position: center;
   position: relative;
-  font-family: 'Quattrocento', serif; }
+  margin-bottom: 3%; }
   .header__click {
     text-decoration: none;
     color: white; }
@@ -102,7 +103,13 @@ a:hover {
     top: 25%;
     left: 14%;
     font-size: 2.5em;
-    transform: rotate(-30deg); }
+    transform: rotate(-30deg);
+    transition: all ease-in-out 350ms; }
+    @media (max-width: 650px) {
+      .header__nav {
+        transform: rotate(0deg);
+        flex-direction: column;
+        top: 5%; } }
     .header__nav__btn {
       margin: 5%;
       font-size: 1.5em;
@@ -115,36 +122,84 @@ a:hover {
         text-align: center;
         transition: all ease-in-out 350ms;
         opacity: 0; }
+        @media (max-width: 650px) {
+          .header__nav__btn--sub {
+            opacity: 1;
+            margin-top: 10px;
+            text-align: left; } }
       .header__nav__btn:hover > .header__nav__btn--sub {
         opacity: 1;
         transform: rotate(30deg);
         color: rgba(107, 251, 186, 0.56); }
+        @media (max-width: 650px) {
+          .header__nav__btn:hover > .header__nav__btn--sub {
+            transform: none; } }
         .header__nav__btn:hover > .header__nav__btn--sub li {
-          transition: all ease-in-out 700ms;
+          transition: all ease-in-out 500ms;
           margin-bottom: 40px;
           cursor: pointer; }
+          @media (max-width: 650px) {
+            .header__nav__btn:hover > .header__nav__btn--sub li {
+              margin-bottom: 0px; } }
+
+li:hover {
+  color: #2a88df; }
 
 .media {
   background-image: url("../img/tape.jpg");
-  min-height: 100vh;
+  height: 100vh;
+  width: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  font-size: 1.5em;
-  color: #6e9a99;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3%; }
+
+.tape {
+  display: none;
+  flex-basis: 45%;
   flex-wrap: wrap;
+  align-items: center;
+  height: 650px;
   justify-content: space-around; }
+  .tape__item {
+    flex-basis: 44%;
+    background-image: url(../img/cassette.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-direction: row;
+    transition: all ease-in-out 200ms; }
+    .tape__item__info {
+      font-size: 2em;
+      color: #3c5f75;
+      opacity: 0;
+      transition: all ease-in-out 400ms;
+      margin: 20px; }
+    .tape__item:hover {
+      filter: grayscale(70%);
+      flex-basis: 50%; }
+    .tape__item:hover > .tape__item__info {
+      opacity: 1; }
+
+.record {
+  flex-basis: 40%; }
 
 .shop {
   display: flex;
   height: 100vh;
-  width: 100vw;
-  font-family: 'Quattrocento', serif;
-  margin: 0 3%; }
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 3%; }
 
 .hoodies {
-  flex-basis: 50%;
+  flex-basis: 45%;
   height: 100%;
   display: none;
   flex-wrap: wrap;
@@ -252,7 +307,7 @@ a:hover {
       flex-basis: 47%; }
 
 .shirts {
-  flex-basis: 50%;
+  flex-basis: 45%;
   height: 100%;
   display: none;
   flex-wrap: wrap;
@@ -369,10 +424,12 @@ a:hover {
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  align-items: center; }
+  align-items: center;
+  margin-bottom: 3%; }
   .forum__register {
     width: 500px;
     height: 400px;
@@ -414,6 +471,22 @@ a:hover {
     .forum__feed a {
       font-size: 1.2em; }
 
+.footer {
+  height: 200px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(18, 26, 34, 0.86); }
+  .footer ul {
+    flex-basis: 33%;
+    display: flex;
+    font-size: 1.5em;
+    color: rgba(240, 240, 240, 0.2);
+    justify-content: space-around; }
+    .footer ul li {
+      margin: 5%; }
+
 .home__top {
   position: fixed;
   text-decoration: none;
@@ -421,9 +494,9 @@ a:hover {
   top: 100px;
   display: none;
   font-size: 10em;
-  color: rgba(56, 56, 56, 0.72); }
+  color: rgba(97, 116, 152, 0.72); }
   .home__top--link:hover {
-    color: rgba(90, 141, 177, 0.51);
+    color: red;
     text-decoration: none; }
   .home__top--link:visited {
     color: inherit; }

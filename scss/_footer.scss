@@ -1,3 +1,24 @@
+.footer {
+	height: 200px;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: rgba(18, 26, 34, 0.86);
+	& ul {
+		flex-basis: 33%;
+		display: flex;
+		font-size: 1.5em;
+		color: rgba(240, 240, 240, 0.2);
+		justify-content: space-around;
+		& li {
+			margin: 5%;
+		}
+	}
+}
+
+
+
 .home__top {
 	position: fixed;
 	text-decoration: none;
@@ -5,10 +26,10 @@
   top: 100px;
 	display: none;
   font-size: 10em;
-  color: rgba(56, 56, 56, 0.72);
+  color: rgba(97, 116, 152, 0.72);
   &--link {
     &:hover {
-      color: rgba(90, 141, 177, 0.51);
+      color: red;
       text-decoration: none;
     }
     &:visited {

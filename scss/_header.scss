@@ -7,7 +7,7 @@
   background-repeat: no-repeat;
   background-position: center;
   position: relative;
-  font-family: 'Quattrocento', serif;
+  margin-bottom: 3%;
   &__click {
     text-decoration: none;
     color: white;
@@ -54,8 +54,13 @@
     top: 25%;
     left: 14%;
     font-size: 2.5em;
-
     transform: rotate(-30deg);
+    transition: all ease-in-out 350ms;
+    @media #{$sm-brk} {
+      transform: rotate(0deg);
+      flex-direction: column;
+      top: 5%;
+    }
     &__btn {
       margin: 5%;
       font-size: 1.5em;
@@ -69,18 +74,34 @@
         text-align: center;
         transition: all ease-in-out 350ms;
         opacity: 0;
+        @media #{$sm-brk} {
+          opacity: 1;
+          margin-top: 10px;
+          text-align: left;
+        }
       }
       &:hover > &--sub {
         opacity: 1;
         transform: rotate(30deg);
         color: rgba(107, 251, 186, 0.56);
+        @media #{$sm-brk} {
+          transform: none;
+        }
 
         & li {
-          transition: all ease-in-out 700ms;
+          transition: all ease-in-out 500ms;
           margin-bottom: 40px;
           cursor: pointer;
+          @media #{$sm-brk} {
+            margin-bottom: 0px;
+          }
         }
       }
     }
   }
 }
+
+
+li:hover {
+    color: rgb(42, 136, 223);
+  }
