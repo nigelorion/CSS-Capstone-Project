@@ -13,7 +13,8 @@
 
   &__item {
     flex-basis: 40%;
-    padding: 4%;
+    margin: 2%;
+
     transition: all ease-in-out 350ms;
     &:hover {
       color: rgb(187, 112, 0);
@@ -80,7 +81,7 @@
       &:hover {
         opacity: 1;
         color: rgba(217, 217, 217, 0.83);
-        flex-basis: 44%;
+        flex-basis: 47%;
       }
     }
   }
@@ -143,4 +144,37 @@
       }
     }
   }
+}
+
+.forum {
+  background-image: url(../img/mixer.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  &__register {
+    flex-basis: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(156, 156, 156, 0.2);
+    width: 33%;
+    min-height: 50%;
+
+    &__input {
+      width: 200px;
+      height: 100px;
+
+    }
+  }
+  &__feed {
+    flex-basis: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
 }

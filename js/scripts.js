@@ -1,8 +1,9 @@
 $(document).ready(function(){
+  $(".container").fadeIn(700);
 
   $(window).scroll(function() {
-      if ($(this).scrollTop() > 800) {
-        $('.home__top').fadeIn(600);
+      if ($(this).scrollTop() > 1000) {
+        $('.home__top').fadeIn(900);
       } else {
         $('.home__top').fadeOut(600);
       }
@@ -21,7 +22,7 @@ $(document).ready(function(){
   })
 
   $(window).scroll(function() {
-      if ($(this).scrollTop() > 100) {
+      if ($(this).scrollTop() > 80) {
         $('#header__click--show').fadeOut(600);
       }
     });
