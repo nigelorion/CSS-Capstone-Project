@@ -1,7 +1,6 @@
-.tape {
+.media {
   background-image: url("../img/tape.jpg");
   min-height: 100vh;
-
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -10,29 +9,20 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-
-  &__item {
-    flex-basis: 40%;
-    margin: 2%;
-
-    transition: all ease-in-out 350ms;
-    &:hover {
-      color: rgb(187, 112, 0);
-    }
-  }
 }
 
 .shop {
   display: flex;
-  height: 100%;
-  width: 100%;
+  height: 100vh;
+  width: 100vw;
   font-family: 'Quattrocento', serif;
+  margin: 0 3%;
 }
 
 .hoodies {
   flex-basis: 50%;
-  height: 100vh;
-  display: flex;
+  height: 100%;
+  display: none;
   flex-wrap: wrap;
   justify-content: center;
   &__title {
@@ -64,10 +54,10 @@
   @for $i from 3 through 6 {
     &__item:nth-of-type(#{$i}) {
       background-image: url(../img/hoodie-1.jpg);
-      background-position: center right;
+      background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
-      transition: all ease-in-out 200ms;
+      transition: all ease-in-out 400ms;
       opacity: .5;
       font-size: 3em;
       text-align: center;
@@ -89,8 +79,8 @@
 
 .shirts {
   flex-basis: 50%;
-  height: 100vh;
-  display: flex;
+  height: 100%;
+  display: none;
   flex-wrap: wrap;
   justify-content: center;
   &__title {
@@ -117,15 +107,14 @@
       background-color: rgba(194, 188, 188, 0.12);
       cursor: pointer;
     }
-
   }
   @for $i from 3 through 6 {
     &__item:nth-of-type(#{$i}) {
       background-image: url(../img/hoodie-2.jpg);
-      background-position: left;
+      background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
-      transition: 200ms all ease-in-out 200ms;
+      transition: all ease-in-out 400ms;
       opacity: .5;
       font-size: 3em;
       text-align: center;
@@ -154,27 +143,57 @@
   height: 100vh;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-around;
+  align-items: center;
   &__register {
-    flex-basis: 50%;
-    display: flex;
-    justify-content: center;
+    width: 500px;
+    height: 400px;
+    display: none;
+    justify-content: space-around;
     align-items: center;
-    background-color: rgba(156, 156, 156, 0.2);
-    width: 33%;
-    min-height: 50%;
 
-    &__input {
-      width: 200px;
-      height: 100px;
-
+    &__btn {
+      background-color: rgba(61, 125, 180, 0.9);
+      border: none;
+      color: rgb(255, 255, 255);
+      width: 400px;
+      height: 80px;
+      font-size: 1.7em;
+      margin: 4%;
+      &:hover {
+        background-color: rgba(198, 198, 198, 0.5);
+        color: rgb(51, 180, 142);
+      }
+    }
+    &__email {
+      height: 40px;
+      width: 400px;
+      background-color: rgba(249, 249, 249, 0.9);
+      font-size: 1.5em;
+      color: rgba(61, 125, 180, 0.9);
+      box-sizing: border-box;
+      display: block;
+      width: 100%;
+      padding: 16px;
+      outline: 0;
+      margin: 4%;
+      border-radius: 0;
+      border-style: none;
+      &:active {
+        background-color: rgba(255, 255, 255, 0.28);
+      }
+    }
+    &__password {
+      @extend .forum__register__email;
     }
   }
   &__feed {
-    flex-basis: 50%;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
+    background-color: rgb(254, 174, 203);
+    & a {
+      font-size: 1.2em;
+    }
   }
-
 }

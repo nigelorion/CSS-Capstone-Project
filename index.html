@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/app.css" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Quattrocento" rel="stylesheet">
     <script src="js/jquery-3.1.1.min.js"></script>
     <script src="js/scripts.js"></script>
@@ -29,7 +29,7 @@
           <li class="header__nav__btn">home</li>
           <li class="header__nav__btn">shop
             <ul class="header__nav__btn--sub">
-              <li><a href="#tapes">cassettes</a></li>
+              <li><a href="#media">media</a></li>
               <li><a href="#wear">wear</a></li>
             </ul>
           </li>
@@ -41,10 +41,10 @@
           </li>
         </ul>
       </div>
-      <div class="tape" id="tapes">
+      <div class="media" id="media">
         <div class="tape__item">
-          <h1>Test</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <!-- <h1>Test</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> -->
         </div>
         <div class="tape__item">
           <!-- <h1>Test</h1>
@@ -61,7 +61,6 @@
       </div>
       <div class="shop" id="wear">
         <div class="hoodies">
-
           <div class="hoodies__title">
             <h1>hoodies</h1>
           </div>
@@ -112,39 +111,33 @@
             <!-- <h1>SHIRT</h1>
             <p>$18</p> -->
           </div>
-
         </div>
       </div>
       <div class="forum" id="forum">
         <div class="forum__register">
           <form>
-            <div id="email">
-              <input type="email" placeholder="Username" id="name">
-            </div>
-            <div id="password">
-              <input type="password" placeholder="Password" id="psw">
-            </div>
-            <button type="submit" name="button">Login</button>
+              <input class="forum__register__email" type="email" placeholder="Username">
+              <input class="forum__register__password" type="password" placeholder="Password">
+              <button class="forum__register__btn" type="submit" name="button">Login</button>
           </form>
         </div>
         <div class="forum__feed">
-          <ul>
-            <li>test</li>
-            <li>testset</li>
-            <li>test</li>
-          </ul>
-
-
+          <script src="https://www.reddit.com/r/LofiHipHop/.embed?limit=10" type="text/javascript"></script>
         </div>
-
       </div>
       <footer class="footer">
+        <div class="footer__left">
+          <ul>
+            <li>test</li>
+            <li>test</li>
+          </ul>
+        </div>
+        <div class="footer__right">
+        </div>
         <div class="home__top">
           <a href="#" class="home__top--link">^</a>
         </div>
       </footer>
     </div>
-    <script src="js/scripts.js"></script>
-    <script src="js/jquery-3.1.1.min.js"></script>
   </body>
 </html>

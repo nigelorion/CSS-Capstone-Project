@@ -1,5 +1,5 @@
 $(document).ready(function(){
-  $(".container").fadeIn(700);
+  // $(".container").fadeIn();
 
   $(window).scroll(function() {
       if ($(this).scrollTop() > 1000) {
@@ -22,10 +22,27 @@ $(document).ready(function(){
   })
 
   $(window).scroll(function() {
-      if ($(this).scrollTop() > 80) {
+      if ($(this).scrollTop() > 200) {
         $('#header__click--show').fadeOut(600);
       }
     });
+
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 2000) {
+          $('.hoodies').fadeIn(1000).css("display", "flex");
+          $('.shirts').fadeIn(1500).css("display", "flex");
+        } if ($(this).scrollTop() < 2000) {
+          $('.hoodies').fadeOut(1000);
+          $('.shirts').fadeOut(1000);
+        }
+        if ($(this).scrollTop() > 3300) {
+          $('.forum__register').fadeIn(1000).css("display", "flex");
+          $('.forum__feed').fadeIn(2000).css("display", "flex");
+        } if ($(this).scrollTop() < 3300) {
+          $('.forum__register').fadeOut(1000);
+          $('.forum__feed').fadeOut(1000);
+        }
+      });
 
   $("a").on('click', function(event) {
 

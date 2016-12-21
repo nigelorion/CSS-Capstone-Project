@@ -1,5 +1,4 @@
 .container {
-  display: none;
   max-width: 1500px;
   margin: 0 auto; }
 
@@ -125,7 +124,7 @@ a:hover {
           margin-bottom: 40px;
           cursor: pointer; }
 
-.tape {
+.media {
   background-image: url("../img/tape.jpg");
   min-height: 100vh;
   background-position: center;
@@ -136,23 +135,18 @@ a:hover {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around; }
-  .tape__item {
-    flex-basis: 40%;
-    margin: 2%;
-    transition: all ease-in-out 350ms; }
-    .tape__item:hover {
-      color: #bb7000; }
 
 .shop {
   display: flex;
-  height: 100%;
-  width: 100%;
-  font-family: 'Quattrocento', serif; }
+  height: 100vh;
+  width: 100vw;
+  font-family: 'Quattrocento', serif;
+  margin: 0 3%; }
 
 .hoodies {
   flex-basis: 50%;
-  height: 100vh;
-  display: flex;
+  height: 100%;
+  display: none;
   flex-wrap: wrap;
   justify-content: center; }
   .hoodies__title {
@@ -178,10 +172,10 @@ a:hover {
       cursor: pointer; }
   .hoodies__item:nth-of-type(3) {
     background-image: url(../img/hoodie-1.jpg);
-    background-position: center right;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    transition: all ease-in-out 200ms;
+    transition: all ease-in-out 400ms;
     opacity: .5;
     font-size: 3em;
     text-align: center;
@@ -198,10 +192,10 @@ a:hover {
       flex-basis: 47%; }
   .hoodies__item:nth-of-type(4) {
     background-image: url(../img/hoodie-1.jpg);
-    background-position: center right;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    transition: all ease-in-out 200ms;
+    transition: all ease-in-out 400ms;
     opacity: .5;
     font-size: 3em;
     text-align: center;
@@ -218,10 +212,10 @@ a:hover {
       flex-basis: 47%; }
   .hoodies__item:nth-of-type(5) {
     background-image: url(../img/hoodie-1.jpg);
-    background-position: center right;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    transition: all ease-in-out 200ms;
+    transition: all ease-in-out 400ms;
     opacity: .5;
     font-size: 3em;
     text-align: center;
@@ -238,10 +232,10 @@ a:hover {
       flex-basis: 47%; }
   .hoodies__item:nth-of-type(6) {
     background-image: url(../img/hoodie-1.jpg);
-    background-position: center right;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    transition: all ease-in-out 200ms;
+    transition: all ease-in-out 400ms;
     opacity: .5;
     font-size: 3em;
     text-align: center;
@@ -259,8 +253,8 @@ a:hover {
 
 .shirts {
   flex-basis: 50%;
-  height: 100vh;
-  display: flex;
+  height: 100%;
+  display: none;
   flex-wrap: wrap;
   justify-content: center; }
   .shirts__title {
@@ -286,10 +280,10 @@ a:hover {
       cursor: pointer; }
   .shirts__item:nth-of-type(3) {
     background-image: url(../img/hoodie-2.jpg);
-    background-position: left;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    transition: 200ms all ease-in-out 200ms;
+    transition: all ease-in-out 400ms;
     opacity: .5;
     font-size: 3em;
     text-align: center;
@@ -307,10 +301,10 @@ a:hover {
       justify-content: center; }
   .shirts__item:nth-of-type(4) {
     background-image: url(../img/hoodie-2.jpg);
-    background-position: left;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    transition: 200ms all ease-in-out 200ms;
+    transition: all ease-in-out 400ms;
     opacity: .5;
     font-size: 3em;
     text-align: center;
@@ -328,10 +322,10 @@ a:hover {
       justify-content: center; }
   .shirts__item:nth-of-type(5) {
     background-image: url(../img/hoodie-2.jpg);
-    background-position: left;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    transition: 200ms all ease-in-out 200ms;
+    transition: all ease-in-out 400ms;
     opacity: .5;
     font-size: 3em;
     text-align: center;
@@ -349,10 +343,10 @@ a:hover {
       justify-content: center; }
   .shirts__item:nth-of-type(6) {
     background-image: url(../img/hoodie-2.jpg);
-    background-position: left;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    transition: 200ms all ease-in-out 200ms;
+    transition: all ease-in-out 400ms;
     opacity: .5;
     font-size: 3em;
     text-align: center;
@@ -377,23 +371,48 @@ a:hover {
   height: 100vh;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; }
+  justify-content: space-around;
+  align-items: center; }
   .forum__register {
-    flex-basis: 50%;
-    display: flex;
+    width: 500px;
+    height: 400px;
+    display: none;
+    justify-content: space-around;
+    align-items: center; }
+    .forum__register__btn {
+      background-color: rgba(61, 125, 180, 0.9);
+      border: none;
+      color: white;
+      width: 400px;
+      height: 80px;
+      font-size: 1.7em;
+      margin: 4%; }
+      .forum__register__btn:hover {
+        background-color: rgba(198, 198, 198, 0.5);
+        color: #33b48e; }
+    .forum__register__email, .forum__register__password {
+      height: 40px;
+      width: 400px;
+      background-color: rgba(249, 249, 249, 0.9);
+      font-size: 1.5em;
+      color: rgba(61, 125, 180, 0.9);
+      box-sizing: border-box;
+      display: block;
+      width: 100%;
+      padding: 16px;
+      outline: 0;
+      margin: 4%;
+      border-radius: 0;
+      border-style: none; }
+      .forum__register__email:active, .forum__register__password:active {
+        background-color: rgba(255, 255, 255, 0.28); }
+  .forum__feed {
+    display: none;
     justify-content: center;
     align-items: center;
-    background-color: rgba(156, 156, 156, 0.2);
-    width: 33%;
-    min-height: 50%; }
-    .forum__register__input {
-      width: 200px;
-      height: 100px; }
-  .forum__feed {
-    flex-basis: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center; }
+    background-color: #feaecb; }
+    .forum__feed a {
+      font-size: 1.2em; }
 
 .home__top {
   position: fixed;
