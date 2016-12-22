@@ -18,7 +18,7 @@ $(document).ready(function(){
   });
 
   $(window).scroll(function () {
-  
+
       $(".fade").each(function () {
           if (($(this).offset().top - $(window).scrollTop()) < 20) {
               $(this).stop().fadeTo(100, 0);
@@ -46,7 +46,7 @@ $(document).ready(function(){
         $('#header__click--show').fadeOut(600);
       }
     });
-    //
+
     // $(window).scroll(function() {
     //     if ($(this).scrollTop() > 2000) {
     //       $('.hoodies').fadeIn(900).css("display", "flex");

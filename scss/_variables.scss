@@ -1,10 +1,10 @@
 // colors
 
-$color__primary: rgba(233, 230, 230, 0.8);
-
-
-
-
+$light: rgba(255, 255, 255, 0.8);
+$light--a: rgba(187, 187, 187, 0.2);
+$light--blue: rgba(88, 203, 228, 0.87);
+$light--green: rgba(107, 251, 186, 0.56);
+$light--orange: rgba(241, 161, 104, 0.76);
 
 // images
 
@@ -31,6 +31,8 @@ $tape__images: $tape__1, $tape__2, $tape__3, $tape__4;
 
 
 // fonts
+
+$font--main: 'Quattrocento', serif;
 
 
 // breakpoints

@@ -1,5 +1,5 @@
 .container {
-  font-family: 'Quattrocento', serif;
+  font-family: "Quattrocento", serif;
   max-width: 1500px;
   margin: 0 auto; }
 
@@ -55,7 +55,7 @@ a:hover {
   cursor: pointer; }
 
 .header {
-  color: rgba(233, 230, 230, 0.8);
+  color: rgba(255, 255, 255, 0.8);
   background: url("../img/rain.gif");
   height: 100vh;
   width: 100%;
@@ -69,7 +69,7 @@ a:hover {
     color: white; }
     .header__click:hover {
       text-decoration: none;
-      color: rgba(10, 119, 221, 0.48); }
+      color: rgba(88, 203, 228, 0.87); }
   .header__logo {
     position: absolute;
     top: 40%;
@@ -98,7 +98,7 @@ a:hover {
           flex-basis: 100%;
           font-size: 5em; } }
       .header__logo__title--mod {
-        color: rgba(12, 199, 249, 0.49); }
+        color: rgba(88, 203, 228, 0.87); }
   .header__overlay {
     background-color: rgba(0, 0, 0, 0.8);
     z-index: -98;
@@ -126,7 +126,7 @@ a:hover {
       font-size: 1.5em;
       transition: all ease-in-out 370ms; }
       .header__nav__btn:hover {
-        color: #7297ba; }
+        color: rgba(23, 119, 140, 0.87); }
       .header__nav__btn--sub {
         font-size: .5em;
         margin-top: 50px;
@@ -154,7 +154,7 @@ a:hover {
               margin-bottom: 0px; } }
 
 li:hover {
-  color: #2a88df; }
+  color: rgba(88, 203, 228, 0.87); }
 
 .media {
   background-image: url("../img/tape.jpg");
@@ -210,7 +210,7 @@ li:hover {
         height: 20%; } }
     .tape__item__info {
       font-size: 2em;
-      color: #3c5f75;
+      color: rgba(30, 157, 184, 0.87);
       opacity: 0;
       transition: all ease-in-out 400ms;
       margin: 20px; }
@@ -230,17 +230,18 @@ li:hover {
     order: 6;
     width: 200px;
     height: 70px;
-    color: white;
+    color: rgba(255, 255, 255, 0.8);
     font-size: 2em;
-    background-color: rgba(105, 217, 170, 0.76);
+    background-color: rgba(88, 203, 228, 0.87);
     display: flex;
     transition: all ease-in-out 200ms; }
     .record__btn p {
       margin: auto; }
     .record__btn:hover {
-      color: rgba(105, 217, 170, 0.46);
-      background-color: rgba(194, 188, 188, 0.12);
-      cursor: pointer; }
+      color: rgba(88, 203, 228, 0.87);
+      background-color: rgba(187, 187, 187, 0.2);
+      cursor: pointer;
+      font-size: 2.5em; }
   @media (max-width: 962px) {
     .record {
       flex-basis: 90%;
@@ -248,6 +249,10 @@ li:hover {
 
 .shop {
   display: flex;
+  background-image: url(../img/mixer-2.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   height: 100%;
   width: 100%;
   justify-content: center;
@@ -262,7 +267,8 @@ li:hover {
   height: 50%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; }
+  justify-content: center;
+  margin: 2%; }
   @media (max-width: 962px) {
     .hoodies {
       flex-basis: 90%; } }
@@ -276,24 +282,25 @@ li:hover {
     order: 6;
     width: 200px;
     height: 70px;
-    color: white;
+    color: rgba(255, 255, 255, 0.8);
     font-size: 2em;
-    background-color: rgba(105, 217, 170, 0.76);
+    background-color: rgba(107, 251, 186, 0.56);
     display: flex;
     transition: all ease-in-out 200ms; }
     .hoodies__btn p {
       margin: auto; }
     .hoodies__btn:hover {
-      color: rgba(105, 217, 170, 0.46);
-      background-color: rgba(194, 188, 188, 0.12);
-      cursor: pointer; }
+      color: rgba(107, 251, 186, 0.56);
+      background-color: rgba(187, 187, 187, 0.2);
+      cursor: pointer;
+      font-size: 2.5em; }
   .hoodies__item:nth-of-type(3) {
     background-image: url("../img/hoodie-1.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    transition: all ease-in-out 400ms;
-    opacity: .5;
+    transition: all ease-in-out 200ms;
+    opacity: .7;
     font-size: 3em;
     text-align: center;
     color: rgba(217, 172, 105, 0.76);
@@ -310,14 +317,15 @@ li:hover {
     .hoodies__item:nth-of-type(3):hover {
       opacity: 1;
       color: rgba(217, 217, 217, 0.83);
-      flex-basis: 55%; }
+      flex-basis: 55%;
+      filter: grayscale(70%); }
   .hoodies__item:nth-of-type(4) {
     background-image: url("../img/hoodie-2.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    transition: all ease-in-out 400ms;
-    opacity: .5;
+    transition: all ease-in-out 200ms;
+    opacity: .7;
     font-size: 3em;
     text-align: center;
     color: rgba(217, 172, 105, 0.76);
@@ -334,14 +342,15 @@ li:hover {
     .hoodies__item:nth-of-type(4):hover {
       opacity: 1;
       color: rgba(217, 217, 217, 0.83);
-      flex-basis: 55%; }
+      flex-basis: 55%;
+      filter: grayscale(70%); }
   .hoodies__item:nth-of-type(5) {
     background-image: url("../img/hoodie-3.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    transition: all ease-in-out 400ms;
-    opacity: .5;
+    transition: all ease-in-out 200ms;
+    opacity: .7;
     font-size: 3em;
     text-align: center;
     color: rgba(217, 172, 105, 0.76);
@@ -358,14 +367,15 @@ li:hover {
     .hoodies__item:nth-of-type(5):hover {
       opacity: 1;
       color: rgba(217, 217, 217, 0.83);
-      flex-basis: 55%; }
+      flex-basis: 55%;
+      filter: grayscale(70%); }
   .hoodies__item:nth-of-type(6) {
     background-image: url("../img/hoodie-4.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    transition: all ease-in-out 400ms;
-    opacity: .5;
+    transition: all ease-in-out 200ms;
+    opacity: .7;
     font-size: 3em;
     text-align: center;
     color: rgba(217, 172, 105, 0.76);
@@ -382,14 +392,16 @@ li:hover {
     .hoodies__item:nth-of-type(6):hover {
       opacity: 1;
       color: rgba(217, 217, 217, 0.83);
-      flex-basis: 55%; }
+      flex-basis: 55%;
+      filter: grayscale(70%); }
 
 .shirts {
   flex-basis: 45%;
   height: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; }
+  justify-content: center;
+  margin: 2%; }
   @media (max-width: 962px) {
     .shirts {
       height: 20%;
@@ -404,24 +416,25 @@ li:hover {
     order: 6;
     width: 200px;
     height: 70px;
-    color: white;
+    color: rgba(255, 255, 255, 0.8);
     font-size: 2em;
-    background-color: rgba(217, 172, 105, 0.76);
+    background-color: rgba(241, 161, 104, 0.76);
     display: flex;
     transition: all ease-in-out 200ms; }
     .shirts__btn p {
       margin: auto; }
     .shirts__btn:hover {
-      color: rgba(217, 172, 105, 0.76);
-      background-color: rgba(194, 188, 188, 0.12);
-      cursor: pointer; }
+      color: rgba(241, 161, 104, 0.76);
+      background-color: rgba(187, 187, 187, 0.2);
+      cursor: pointer;
+      font-size: 2.5em; }
   .shirts__item:nth-of-type(3) {
     background-image: url("../img/shirt-1.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    transition: all ease-in-out 400ms;
-    opacity: .5;
+    transition: all ease-in-out 300ms;
+    opacity: .7;
     font-size: 3em;
     text-align: center;
     color: rgba(105, 217, 170, 0.76);
@@ -437,7 +450,7 @@ li:hover {
         flex: 1; } }
     .shirts__item:nth-of-type(3):hover {
       opacity: 1;
-      color: rgba(217, 217, 217, 0.83);
+      filter: grayscale(70%);
       flex-basis: 55%;
       justify-content: center; }
   .shirts__item:nth-of-type(4) {
@@ -445,8 +458,8 @@ li:hover {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    transition: all ease-in-out 400ms;
-    opacity: .5;
+    transition: all ease-in-out 300ms;
+    opacity: .7;
     font-size: 3em;
     text-align: center;
     color: rgba(105, 217, 170, 0.76);
@@ -462,7 +475,7 @@ li:hover {
         flex: 1; } }
     .shirts__item:nth-of-type(4):hover {
       opacity: 1;
-      color: rgba(217, 217, 217, 0.83);
+      filter: grayscale(70%);
       flex-basis: 55%;
       justify-content: center; }
   .shirts__item:nth-of-type(5) {
@@ -470,8 +483,8 @@ li:hover {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    transition: all ease-in-out 400ms;
-    opacity: .5;
+    transition: all ease-in-out 300ms;
+    opacity: .7;
     font-size: 3em;
     text-align: center;
     color: rgba(105, 217, 170, 0.76);
@@ -487,7 +500,7 @@ li:hover {
         flex: 1; } }
     .shirts__item:nth-of-type(5):hover {
       opacity: 1;
-      color: rgba(217, 217, 217, 0.83);
+      filter: grayscale(70%);
       flex-basis: 55%;
       justify-content: center; }
   .shirts__item:nth-of-type(6) {
@@ -495,8 +508,8 @@ li:hover {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    transition: all ease-in-out 400ms;
-    opacity: .5;
+    transition: all ease-in-out 300ms;
+    opacity: .7;
     font-size: 3em;
     text-align: center;
     color: rgba(105, 217, 170, 0.76);
@@ -512,7 +525,7 @@ li:hover {
         flex: 1; } }
     .shirts__item:nth-of-type(6):hover {
       opacity: 1;
-      color: rgba(217, 217, 217, 0.83);
+      filter: grayscale(70%);
       flex-basis: 55%;
       justify-content: center; }
 
@@ -536,11 +549,15 @@ li:hover {
     height: 400px;
     justify-content: center;
     align-items: center;
-    display: flex; }
+    display: flex;
+    flex-basis: 40%; }
+    @media (max-width: 962px) {
+      .forum__register {
+        flex-basis: 90%; } }
     .forum__register__btn {
-      background-color: rgba(61, 125, 180, 0.9);
+      background-color: rgba(88, 203, 228, 0.87);
       border: none;
-      color: white;
+      color: rgba(255, 255, 255, 0.8);
       width: 400px;
       height: 80px;
       font-size: 1.7em;
@@ -550,14 +567,14 @@ li:hover {
         .forum__register__btn {
           width: 300px; } }
       .forum__register__btn:hover {
-        background-color: rgba(198, 198, 198, 0.5);
-        color: #330a0c; }
+        background-color: rgba(187, 187, 187, 0.2);
+        color: rgba(88, 203, 228, 0.87); }
     .forum__register__email, .forum__register__password {
       height: 40px;
       width: 400px;
-      background-color: rgba(249, 249, 249, 0.9);
+      background-color: rgba(255, 255, 255, 0.8);
       font-size: 1.5em;
-      color: rgba(61, 125, 180, 0.9);
+      color: rgba(8, 45, 53, 0.87);
       box-sizing: border-box;
       display: block;
       padding: 16px;
@@ -570,12 +587,24 @@ li:hover {
         .forum__register__email, .forum__register__password {
           width: 300px; } }
       .forum__register__email:active, .forum__register__password:active {
-        background-color: rgba(255, 255, 255, 0.28); }
+        background-color: rgba(255, 255, 255, 0.8); }
   .forum__feed {
     justify-content: center;
     align-items: center;
-    background-color: #feaecb;
-    width: 90%; }
+    filter: grayscale(100%);
+    flex-basis: 50%;
+    margin: 2%;
+    transition: all ease-in-out 200ms;
+    border: none; }
+    .forum__feed .reddit-header {
+      display: none; }
+    .forum__feed .rembeddit-content {
+      font-family: 'Quattrocento', serif; }
+    @media (max-width: 962px) {
+      .forum__feed {
+        flex-basis: 90%; } }
+    .forum__feed:hover {
+      filter: grayscale(1%); }
     .forum__feed a {
       font-size: 1.2em; }
 
@@ -583,16 +612,23 @@ li:hover {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  background-image: url(../img/record.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   height: 100vh;
-  margin: 0 auto; }
-  @media (max-width: 962px) {
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center; }
+  @media (max-width: 1110px) {
     .sets {
       height: 100%; } }
   .sets__vid {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-basis: 45%; }
+    flex-basis: 45%;
+    margin: 2%; }
     @media (max-width: 650px) {
       .sets__vid {
         flex-basis: 90%; } }
