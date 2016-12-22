@@ -1,18 +1,10 @@
 .media {
-  background-image: url("../img/tape.jpg");
-  height: 100vh;
-  width: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 3%;
+  @include section("../img/tape.jpg", 100vh);
   @media #{$md-brk} {
     flex-direction: column;
   }
 }
+
 
 .tape {
   display: flex;
@@ -44,7 +36,7 @@
     justify-content: space-between;
     align-items: flex-end;
     flex-direction: row;
-    transition: all ease-in-out 200ms;
+    transition: all ease-in-out 300ms;
     opacity: .5;
     @media #{$md-brk} {
       flex-basis: 90%;
@@ -81,9 +73,8 @@
      background-color: $light--blue;
      display: flex;
      transition: all ease-in-out 200ms;
-     & p {
-       margin: auto;
-     }
+     justify-content: center;
+     align-items: center;
      &:hover {
        color: $light--blue;
        background-color: $light--a;
@@ -95,181 +86,30 @@
    @media #{$md-brk} {
      flex-basis: 90%;
      flex: 1;
-
    }
  }
 
 .shop {
-  display: flex;
-  background-image: url(../img/mixer-2.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100%;
-  width: 100%;
-  justify-content: center;
-  margin-bottom: 3%;
+  @include section("../img/mixer-2.jpg", 100%);
   @media #{$md-brk} {
     flex-direction: row;
     flex-wrap: wrap;
-
   }
 }
 
 .hoodies {
-  flex-basis: 45%;
-  height: 50%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin: 2%;
-  @media #{$md-brk} {
-    flex-basis: 90%;
+    @include card($dark, $light, $light--green, $hoodies__images, $light--green, $light--a);
   }
-  &__title {
-    order: 5;
-    font-size: 5em;
-    flex-basis: 90%;
-    text-align: center;
-    margin-top: 20px;
-    color: $dark;
-  }
-  &__btn {
-    order: 6;
-    width: 200px;
-    height: 70px;
-    color: $light;
-    font-size: 2em;
-    background-color: $light--green;
-    display: flex;
-    transition: all ease-in-out 200ms;
-    & p {
-      margin: auto;
-    }
-    &:hover {
-      color: $light--green;
-      background-color: $light--a;
-      cursor: pointer;
-      font-size: 2.5em;
-    }
-  }
-  // @for $i from 1 through 4 {
-  //   &__item:nth-of-type(#{$i + 2}) {
-  //     background-image: url(nth($hoodies__images, $i));
-  @for $i from 1 through length($hoodies__images) {
-    &__item:nth-of-type(#{$i + 2}) {
-      background-image: url(nth($hoodies__images, $i));
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      transition: all ease-in-out 200ms;
-      opacity: .7;
-      font-size: 3em;
-      text-align: center;
-      color: rgba(217, 172, 105, 0.76);
-      flex-basis: 32%;
-      margin: 2%;
-      min-height: 365px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      @media #{$md-brk} {
-        min-height: 200px;
-        flex: 1;
-      }
-      &:hover {
-        opacity: 1;
-        color: rgba(217, 217, 217, 0.83);
-        flex-basis: 55%;
-        filter: grayscale(70%);
-      }
-    }
-  }
-}
 
 .shirts {
-  flex-basis: 45%;
-  height: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin: 2%;
-  @media #{$md-brk} {
-    height: 20%;
-    flex-basis: 90%;
-  }
-  &__title {
-    font-size: 5em;
-    flex-basis: 90%;
-    order: 5;
-    text-align: center;
-    margin-top: 20px;
-    color: $dark;
-  }
-  &__btn {
-    order: 6;
-    width: 200px;
-    height: 70px;
-    color: $light;
-    font-size: 2em;
-    background-color: $light--orange;
-    display: flex;
-    transition: all ease-in-out 200ms;
-    & p {
-      margin: auto;
-    }
-    &:hover {
-      color: $light--orange;
-      background-color: $light--a;
-      cursor: pointer;
-      font-size: 2.5em;
-    }
-  }
-  @for $i from 1 through length($shirts__images) {
-    &__item:nth-of-type(#{$i + 2}) {
-      background-image: url(nth($shirts__images, $i));
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      transition: all ease-in-out 300ms;
-      opacity: .7;
-      font-size: 3em;
-      text-align: center;
-      color: rgba(105, 217, 170, 0.76);
-      flex-basis: 32%;
-      margin: 2%;
-      min-height: 365px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      @media #{$md-brk} {
-        min-height: 200px;
-        flex: 1;
-      }
-      &:hover {
-        opacity: 1;
-        filter: grayscale(70%);
-        flex-basis: 55%;
-        justify-content: center;
-      }
-    }
-  }
+  @include card($dark, $light, $light--orange, $shirts__images, $light--orange, $light--a);
 }
 
 .forum {
-  background-image: url(../img/mixer.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100vh;
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-  margin-bottom: 3%;
+  @include section("../img/mixer.jpg", 100vh);
   @media #{$lg-brk} {
     height: 100%;
+    flex-direction: column;
   }
   &__register {
     width: 500px;
@@ -337,7 +177,7 @@
       display: none;
     }
     & .rembeddit-content {
-      font-family: 'Quattrocento', serif;
+      font-family: $font--main;
     }
     @media #{$md-brk} {
       flex-basis: 90%;
@@ -345,24 +185,13 @@
     &:hover {
       filter: grayscale(1%);
     }
-    & a {
-      font-size: 1.2em;
-    }
   }
 }
 
 .sets {
-  display: flex;
+  @include section("../img/record.jpg", 100vh);
   flex-wrap: wrap;
-  justify-content: center;
-  background-image: url(../img/record.jpg);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 100vh;
   margin: 0 auto;
-  justify-content: center;
-  align-items: center;
   @media #{$lg-brk} {
     height: 100%;
   }
@@ -372,13 +201,8 @@
     justify-content: center;
     flex-basis: 45%;
     margin: 2%;
-    & iframe {
-      // width: 100%;
-      // height: 100%;
-    }
     @media #{$sm-brk} {
       flex-basis: 90%;
     }
   }
-
 }

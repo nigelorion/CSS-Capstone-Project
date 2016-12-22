@@ -164,9 +164,9 @@ li:hover {
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
+  margin-bottom: 3%;
   justify-content: center;
-  align-items: center;
-  margin-bottom: 3%; }
+  align-items: center; }
   @media (max-width: 962px) {
     .media {
       flex-direction: column; } }
@@ -202,7 +202,7 @@ li:hover {
     justify-content: space-between;
     align-items: flex-end;
     flex-direction: row;
-    transition: all ease-in-out 200ms;
+    transition: all ease-in-out 300ms;
     opacity: .5; }
     @media (max-width: 962px) {
       .tape__item {
@@ -234,9 +234,9 @@ li:hover {
     font-size: 2em;
     background-color: rgba(88, 203, 228, 0.87);
     display: flex;
-    transition: all ease-in-out 200ms; }
-    .record__btn p {
-      margin: auto; }
+    transition: all ease-in-out 200ms;
+    justify-content: center;
+    align-items: center; }
     .record__btn:hover {
       color: rgba(88, 203, 228, 0.87);
       background-color: rgba(187, 187, 187, 0.2);
@@ -248,15 +248,16 @@ li:hover {
       flex: 1; } }
 
 .shop {
-  display: flex;
-  background-image: url(../img/mixer-2.jpg);
+  background-image: url("../img/mixer-2.jpg");
+  height: 100%;
+  width: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100%;
-  width: 100%;
+  display: flex;
+  margin-bottom: 3%;
   justify-content: center;
-  margin-bottom: 3%; }
+  align-items: center; }
   @media (max-width: 962px) {
     .shop {
       flex-direction: row;
@@ -264,18 +265,19 @@ li:hover {
 
 .hoodies {
   flex-basis: 45%;
-  height: 50%;
+  height: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   margin: 2%; }
   @media (max-width: 962px) {
     .hoodies {
+      height: 20%;
       flex-basis: 90%; } }
   .hoodies__title {
-    order: 5;
     font-size: 5em;
     flex-basis: 90%;
+    order: 5;
     text-align: center;
     margin-top: 20px;
     color: #585858; }
@@ -287,9 +289,9 @@ li:hover {
     font-size: 2em;
     background-color: rgba(107, 251, 186, 0.56);
     display: flex;
-    transition: all ease-in-out 200ms; }
-    .hoodies__btn p {
-      margin: auto; }
+    transition: all ease-in-out 200ms;
+    justify-content: center;
+    align-items: center; }
     .hoodies__btn:hover {
       color: rgba(107, 251, 186, 0.56);
       background-color: rgba(187, 187, 187, 0.2);
@@ -300,11 +302,11 @@ li:hover {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    transition: all ease-in-out 200ms;
+    transition: all ease-in-out 300ms;
     opacity: .7;
     font-size: 3em;
     text-align: center;
-    color: rgba(217, 172, 105, 0.76);
+    color: rgba(107, 251, 186, 0.56);
     flex-basis: 32%;
     margin: 2%;
     min-height: 365px;
@@ -317,19 +319,19 @@ li:hover {
         flex: 1; } }
     .hoodies__item:nth-of-type(3):hover {
       opacity: 1;
-      color: rgba(217, 217, 217, 0.83);
+      filter: grayscale(70%);
       flex-basis: 55%;
-      filter: grayscale(70%); }
+      justify-content: center; }
   .hoodies__item:nth-of-type(4) {
     background-image: url("../img/hoodie-2.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    transition: all ease-in-out 200ms;
+    transition: all ease-in-out 300ms;
     opacity: .7;
     font-size: 3em;
     text-align: center;
-    color: rgba(217, 172, 105, 0.76);
+    color: rgba(107, 251, 186, 0.56);
     flex-basis: 32%;
     margin: 2%;
     min-height: 365px;
@@ -342,19 +344,19 @@ li:hover {
         flex: 1; } }
     .hoodies__item:nth-of-type(4):hover {
       opacity: 1;
-      color: rgba(217, 217, 217, 0.83);
+      filter: grayscale(70%);
       flex-basis: 55%;
-      filter: grayscale(70%); }
+      justify-content: center; }
   .hoodies__item:nth-of-type(5) {
     background-image: url("../img/hoodie-3.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    transition: all ease-in-out 200ms;
+    transition: all ease-in-out 300ms;
     opacity: .7;
     font-size: 3em;
     text-align: center;
-    color: rgba(217, 172, 105, 0.76);
+    color: rgba(107, 251, 186, 0.56);
     flex-basis: 32%;
     margin: 2%;
     min-height: 365px;
@@ -367,19 +369,19 @@ li:hover {
         flex: 1; } }
     .hoodies__item:nth-of-type(5):hover {
       opacity: 1;
-      color: rgba(217, 217, 217, 0.83);
+      filter: grayscale(70%);
       flex-basis: 55%;
-      filter: grayscale(70%); }
+      justify-content: center; }
   .hoodies__item:nth-of-type(6) {
     background-image: url("../img/hoodie-4.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    transition: all ease-in-out 200ms;
+    transition: all ease-in-out 300ms;
     opacity: .7;
     font-size: 3em;
     text-align: center;
-    color: rgba(217, 172, 105, 0.76);
+    color: rgba(107, 251, 186, 0.56);
     flex-basis: 32%;
     margin: 2%;
     min-height: 365px;
@@ -392,9 +394,9 @@ li:hover {
         flex: 1; } }
     .hoodies__item:nth-of-type(6):hover {
       opacity: 1;
-      color: rgba(217, 217, 217, 0.83);
+      filter: grayscale(70%);
       flex-basis: 55%;
-      filter: grayscale(70%); }
+      justify-content: center; }
 
 .shirts {
   flex-basis: 45%;
@@ -422,9 +424,9 @@ li:hover {
     font-size: 2em;
     background-color: rgba(241, 161, 104, 0.76);
     display: flex;
-    transition: all ease-in-out 200ms; }
-    .shirts__btn p {
-      margin: auto; }
+    transition: all ease-in-out 200ms;
+    justify-content: center;
+    align-items: center; }
     .shirts__btn:hover {
       color: rgba(241, 161, 104, 0.76);
       background-color: rgba(187, 187, 187, 0.2);
@@ -439,7 +441,7 @@ li:hover {
     opacity: .7;
     font-size: 3em;
     text-align: center;
-    color: rgba(105, 217, 170, 0.76);
+    color: rgba(241, 161, 104, 0.76);
     flex-basis: 32%;
     margin: 2%;
     min-height: 365px;
@@ -464,7 +466,7 @@ li:hover {
     opacity: .7;
     font-size: 3em;
     text-align: center;
-    color: rgba(105, 217, 170, 0.76);
+    color: rgba(241, 161, 104, 0.76);
     flex-basis: 32%;
     margin: 2%;
     min-height: 365px;
@@ -489,7 +491,7 @@ li:hover {
     opacity: .7;
     font-size: 3em;
     text-align: center;
-    color: rgba(105, 217, 170, 0.76);
+    color: rgba(241, 161, 104, 0.76);
     flex-basis: 32%;
     margin: 2%;
     min-height: 365px;
@@ -514,7 +516,7 @@ li:hover {
     opacity: .7;
     font-size: 3em;
     text-align: center;
-    color: rgba(105, 217, 170, 0.76);
+    color: rgba(241, 161, 104, 0.76);
     flex-basis: 32%;
     margin: 2%;
     min-height: 365px;
@@ -532,20 +534,20 @@ li:hover {
       justify-content: center; }
 
 .forum {
-  background-image: url(../img/mixer.jpg);
+  background-image: url("../img/mixer.jpg");
+  height: 100vh;
+  width: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
-  width: 100%;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-  margin-bottom: 3%; }
+  margin-bottom: 3%;
+  justify-content: center;
+  align-items: center; }
   @media (max-width: 1110px) {
     .forum {
-      height: 100%; } }
+      height: 100%;
+      flex-direction: column; } }
   .forum__register {
     width: 500px;
     height: 400px;
@@ -601,27 +603,26 @@ li:hover {
     .forum__feed .reddit-header {
       display: none; }
     .forum__feed .rembeddit-content {
-      font-family: 'Quattrocento', serif; }
+      font-family: "Quattrocento", serif; }
     @media (max-width: 962px) {
       .forum__feed {
         flex-basis: 90%; } }
     .forum__feed:hover {
       filter: grayscale(1%); }
-    .forum__feed a {
-      font-size: 1.2em; }
 
 .sets {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  background-image: url(../img/record.jpg);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-image: url("../img/record.jpg");
   height: 100vh;
-  margin: 0 auto;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  margin-bottom: 3%;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0 auto; }
   @media (max-width: 1110px) {
     .sets {
       height: 100%; } }

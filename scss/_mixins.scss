@@ -1,0 +1,80 @@
+@mixin card($color-1, $color-2, $color-3, $images, $background-1, $background-2) {
+  flex-basis: 45%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 2%;
+  @media #{$md-brk} {
+    height: 20%;
+    flex-basis: 90%;
+  }
+  &__title {
+    font-size: 5em;
+    flex-basis: 90%;
+    order: 5;
+    text-align: center;
+    margin-top: 20px;
+    color: $color-1;
+  }
+  &__btn {
+    order: 6;
+    width: 200px;
+    height: 70px;
+    color: $color-2;
+    font-size: 2em;
+    background-color: $background-1;
+    display: flex;
+    transition: all ease-in-out 200ms;
+    justify-content: center;
+    align-items: center;
+    &:hover {
+      color: $color-3;
+      background-color: $background-2;
+      cursor: pointer;
+      font-size: 2.5em;
+    }
+  }
+  @for $i from 1 through length($images) {
+    &__item:nth-of-type(#{$i + 2}) {
+      background-image: url(nth($images, $i));
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      transition: all ease-in-out 300ms;
+      opacity: .7;
+      font-size: 3em;
+      text-align: center;
+      color: $color-3;
+      flex-basis: 32%;
+      margin: 2%;
+      min-height: 365px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      @media #{$md-brk} {
+        min-height: 200px;
+        flex: 1;
+      }
+      &:hover {
+        opacity: 1;
+        filter: grayscale(70%);
+        flex-basis: 55%;
+        justify-content: center;
+      }
+    }
+  }
+}
+
+@mixin section($image__path, $height) {
+  background-image: url($image__path);
+  height: $height;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  margin-bottom: 3%;
+  justify-content: center;
+  align-items: center;
+}
