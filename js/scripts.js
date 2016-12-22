@@ -35,9 +35,9 @@ $(document).ready(function(){
           $('.hoodies').fadeOut(1000);
           $('.shirts').fadeOut(1000);
         }
-        if ($(this).scrollTop() > 1000) {
+        if ($(this).scrollTop() > 800) {
           $('.tape').fadeIn(900).css("display", "flex");
-        } if ($(this).scrollTop() < 1000) {
+        } if ($(this).scrollTop() < 800) {
           $('.tape').fadeOut(1000);
         }
         if ($(this).scrollTop() > 2800) {

@@ -159,11 +159,16 @@ li:hover {
 
 .tape {
   display: none;
-  flex-basis: 45%;
+  flex-basis: 70%;
   flex-wrap: wrap;
   align-items: center;
   height: 650px;
   justify-content: space-around; }
+  @media (max-width: 960px) {
+    .tape {
+      flex-basis: 90%;
+      height: 100%;
+      align-items: center; } }
   .tape__item {
     flex-basis: 44%;
     background-image: url(../img/cassette.jpg);
@@ -171,11 +176,16 @@ li:hover {
     background-size: cover;
     background-repeat: no-repeat;
     height: 300px;
+    min-width: 300px;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
     flex-direction: row;
     transition: all ease-in-out 200ms; }
+    @media (max-width: 960px) {
+      .tape__item {
+        flex-basis: 90%;
+        height: 22%; } }
     .tape__item__info {
       font-size: 2em;
       color: #3c5f75;
@@ -189,7 +199,10 @@ li:hover {
       opacity: 1; }
 
 .record {
-  flex-basis: 40%; }
+  flex-basis: 20%; }
+  @media (max-width: 960px) {
+    .record {
+      display: none; } }
 
 .shop {
   display: flex;
@@ -204,6 +217,10 @@ li:hover {
   display: none;
   flex-wrap: wrap;
   justify-content: center; }
+  @media (max-width: 960px) {
+    .hoodies {
+      height: 40%;
+      flex-basis: 90%; } }
   .hoodies__title {
     font-size: 5em;
     flex-basis: 90%;
@@ -312,6 +329,10 @@ li:hover {
   display: none;
   flex-wrap: wrap;
   justify-content: center; }
+  @media (max-width: 960px) {
+    .shirts {
+      height: 40%;
+      flex-basis: 90%; } }
   .shirts__title {
     font-size: 5em;
     flex-basis: 90%;
@@ -500,5 +521,8 @@ li:hover {
     text-decoration: none; }
   .home__top--link:visited {
     color: inherit; }
+
+.fade {
+  opacity: 0; }
 
 /*# sourceMappingURL=app.css.map */
