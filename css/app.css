@@ -164,7 +164,7 @@ li:hover {
   align-items: center;
   height: 650px;
   justify-content: space-around; }
-  @media (max-width: 960px) {
+  @media (max-width: 962px) {
     .tape {
       flex-basis: 90%;
       height: 100%;
@@ -182,7 +182,7 @@ li:hover {
     align-items: flex-end;
     flex-direction: row;
     transition: all ease-in-out 200ms; }
-    @media (max-width: 960px) {
+    @media (max-width: 962px) {
       .tape__item {
         flex-basis: 90%;
         height: 22%; } }
@@ -200,7 +200,7 @@ li:hover {
 
 .record {
   flex-basis: 20%; }
-  @media (max-width: 960px) {
+  @media (max-width: 962px) {
     .record {
       display: none; } }
 
@@ -210,6 +210,10 @@ li:hover {
   width: 100%;
   justify-content: center;
   margin-bottom: 3%; }
+  @media (max-width: 962px) {
+    .shop {
+      flex-direction: row;
+      flex-wrap: wrap; } }
 
 .hoodies {
   flex-basis: 45%;
@@ -217,9 +221,9 @@ li:hover {
   display: none;
   flex-wrap: wrap;
   justify-content: center; }
-  @media (max-width: 960px) {
+  @media (max-width: 962px) {
     .hoodies {
-      height: 40%;
+      height: 200px;
       flex-basis: 90%; } }
   .hoodies__title {
     font-size: 5em;
@@ -329,7 +333,7 @@ li:hover {
   display: none;
   flex-wrap: wrap;
   justify-content: center; }
-  @media (max-width: 960px) {
+  @media (max-width: 962px) {
     .shirts {
       height: 40%;
       flex-basis: 90%; } }

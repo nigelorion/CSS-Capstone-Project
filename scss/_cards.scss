@@ -72,6 +72,8 @@
   justify-content: center;
   margin-bottom: 3%;
   @media #{$md-brk} {
+    flex-direction: row;
+    flex-wrap: wrap;
 
   }
 }
@@ -83,7 +85,7 @@
   flex-wrap: wrap;
   justify-content: center;
   @media #{$md-brk} {
-    height: 40%;
+    height: 200px;
     flex-basis: 90%;
   }
   &__title {
