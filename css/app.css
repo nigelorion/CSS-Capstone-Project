@@ -277,7 +277,8 @@ li:hover {
     font-size: 5em;
     flex-basis: 90%;
     text-align: center;
-    margin-top: 20px; }
+    margin-top: 20px;
+    color: #585858; }
   .hoodies__btn {
     order: 6;
     width: 200px;
@@ -411,7 +412,8 @@ li:hover {
     flex-basis: 90%;
     order: 5;
     text-align: center;
-    margin-top: 20px; }
+    margin-top: 20px;
+    color: #585858; }
   .shirts__btn {
     order: 6;
     width: 200px;
