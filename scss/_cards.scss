@@ -9,11 +9,13 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 3%;
+  @media #{$md-brk} {
+    flex-direction: column;
+  }
 }
 
 .tape {
-  display: none;
-
+  display: flex;
   flex-basis: 70%;
   flex-wrap: wrap;
   align-items: center;
@@ -23,10 +25,12 @@
     flex-basis: 90%;
     height: 100%;
     align-items: center;
+
   }
 
   &__item {
     flex-basis: 44%;
+
     background-image: url(../img/cassette.jpg);
     background-position: center;
     background-size: cover;
@@ -40,7 +44,7 @@
     transition: all ease-in-out 200ms;
     @media #{$md-brk} {
       flex-basis: 90%;
-      height: 22%;
+      height: 20%;
     }
     &__info {
       font-size: 2em;
@@ -59,15 +63,39 @@
   }
 }
  .record {
-   flex-basis: 20%;
+   flex-basis: 30%;
+   align-items: center;
+   justify-content: center;
+   display: flex;
+   &__btn {
+     order: 6;
+     width: 200px;
+     height: 70px;
+     color: rgb(255, 255, 255);
+     font-size: 2em;
+     background-color: rgba(105, 217, 170, 0.76);
+     display: flex;
+     transition: all ease-in-out 200ms;
+     & p {
+       margin: auto;
+     }
+     &:hover {
+       color: rgba(105, 217, 170, 0.46);
+       background-color: rgba(194, 188, 188, 0.12);
+       cursor: pointer;
+     }
+
+   }
    @media #{$md-brk} {
-     display: none;
+     flex-basis: 90%;
+     flex: 1;
+
    }
  }
 
 .shop {
   display: flex;
-  height: 100vh;
+  height: 100%;
   width: 100%;
   justify-content: center;
   margin-bottom: 3%;
@@ -80,12 +108,11 @@
 
 .hoodies {
   flex-basis: 45%;
-  height: 100%;
-  display: none;
+  height: 50%;
+  display: flex;
   flex-wrap: wrap;
   justify-content: center;
   @media #{$md-brk} {
-    height: 200px;
     flex-basis: 90%;
   }
   &__title {
@@ -131,6 +158,10 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      @media #{$md-brk} {
+        min-height: 200px;
+        flex: 1;
+      }
       &:hover {
         opacity: 1;
         color: rgba(217, 217, 217, 0.83);
@@ -143,11 +174,11 @@
 .shirts {
   flex-basis: 45%;
   height: 100%;
-  display: none;
+  display: flex;
   flex-wrap: wrap;
   justify-content: center;
   @media #{$md-brk} {
-    height: 40%;
+    height: 20%;
     flex-basis: 90%;
   }
   &__title {
@@ -192,6 +223,10 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      @media #{$md-brk} {
+        min-height: 200px;
+        flex: 1;
+      }
       &:hover {
         opacity: 1;
         color: rgba(217, 217, 217, 0.83);
@@ -214,12 +249,15 @@
   justify-content: space-around;
   align-items: center;
   margin-bottom: 3%;
+  @media #{$lg-brk} {
+    height: 100%;
+  }
   &__register {
     width: 500px;
     height: 400px;
-    display: none;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+    display: flex;
 
     &__btn {
       background-color: rgba(61, 125, 180, 0.9);
@@ -228,7 +266,11 @@
       width: 400px;
       height: 80px;
       font-size: 1.7em;
-      margin: 4%;
+      margin: 3% auto;
+      @media #{$sm-brk} {
+        width: 300px;
+
+      }
       &:hover {
         background-color: rgba(198, 198, 198, 0.5);
         color: rgb(51, 180, 142);
@@ -242,12 +284,15 @@
       color: rgba(61, 125, 180, 0.9);
       box-sizing: border-box;
       display: block;
-      width: 100%;
       padding: 16px;
       outline: 0;
-      margin: 4%;
+      margin: 3% auto;
       border-radius: 0;
       border-style: none;
+      align-self: center;
+      @media #{$sm-brk} {
+        width: 300px;
+      }
       &:active {
         background-color: rgba(255, 255, 255, 0.28);
       }
@@ -257,10 +302,10 @@
     }
   }
   &__feed {
-    display: none;
     justify-content: center;
     align-items: center;
     background-color: rgb(254, 174, 203);
+    width: 90%;
     & a {
       font-size: 1.2em;
     }

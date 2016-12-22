@@ -75,6 +75,12 @@ a:hover {
     top: 40%;
     right: 0;
     display: flex; }
+    @media (max-width: 650px) {
+      .header__logo {
+        flex-direction: column;
+        width: 90%;
+        flex-basis: 90%;
+        top: 60%; } }
     .header__logo__about {
       font-size: 1.6em;
       position: absolute;
@@ -87,6 +93,10 @@ a:hover {
       text-align: right;
       flex-basis: 70%;
       margin-right: 5%; }
+      @media (max-width: 650px) {
+        .header__logo__title {
+          flex-basis: 100%;
+          font-size: 5em; } }
       .header__logo__title--mod {
         color: rgba(12, 199, 249, 0.49); }
   .header__overlay {
@@ -100,7 +110,7 @@ a:hover {
     position: absolute;
     display: flex;
     justify-content: space-between;
-    top: 25%;
+    top: 35%;
     left: 14%;
     font-size: 2.5em;
     transform: rotate(-30deg);
@@ -109,7 +119,8 @@ a:hover {
       .header__nav {
         transform: rotate(0deg);
         flex-direction: column;
-        top: 5%; } }
+        top: 5%;
+        font-size: 2em; } }
     .header__nav__btn {
       margin: 5%;
       font-size: 1.5em;
@@ -156,9 +167,12 @@ li:hover {
   justify-content: center;
   align-items: center;
   margin-bottom: 3%; }
+  @media (max-width: 962px) {
+    .media {
+      flex-direction: column; } }
 
 .tape {
-  display: none;
+  display: flex;
   flex-basis: 70%;
   flex-wrap: wrap;
   align-items: center;
@@ -185,7 +199,7 @@ li:hover {
     @media (max-width: 962px) {
       .tape__item {
         flex-basis: 90%;
-        height: 22%; } }
+        height: 20%; } }
     .tape__item__info {
       font-size: 2em;
       color: #3c5f75;
@@ -199,14 +213,33 @@ li:hover {
       opacity: 1; }
 
 .record {
-  flex-basis: 20%; }
+  flex-basis: 30%;
+  align-items: center;
+  justify-content: center;
+  display: flex; }
+  .record__btn {
+    order: 6;
+    width: 200px;
+    height: 70px;
+    color: white;
+    font-size: 2em;
+    background-color: rgba(105, 217, 170, 0.76);
+    display: flex;
+    transition: all ease-in-out 200ms; }
+    .record__btn p {
+      margin: auto; }
+    .record__btn:hover {
+      color: rgba(105, 217, 170, 0.46);
+      background-color: rgba(194, 188, 188, 0.12);
+      cursor: pointer; }
   @media (max-width: 962px) {
     .record {
-      display: none; } }
+      flex-basis: 90%;
+      flex: 1; } }
 
 .shop {
   display: flex;
-  height: 100vh;
+  height: 100%;
   width: 100%;
   justify-content: center;
   margin-bottom: 3%; }
@@ -217,13 +250,12 @@ li:hover {
 
 .hoodies {
   flex-basis: 45%;
-  height: 100%;
-  display: none;
+  height: 50%;
+  display: flex;
   flex-wrap: wrap;
   justify-content: center; }
   @media (max-width: 962px) {
     .hoodies {
-      height: 200px;
       flex-basis: 90%; } }
   .hoodies__title {
     font-size: 5em;
@@ -262,6 +294,10 @@ li:hover {
     display: flex;
     flex-direction: column;
     justify-content: space-between; }
+    @media (max-width: 962px) {
+      .hoodies__item:nth-of-type(3) {
+        min-height: 200px;
+        flex: 1; } }
     .hoodies__item:nth-of-type(3):hover {
       opacity: 1;
       color: rgba(217, 217, 217, 0.83);
@@ -282,6 +318,10 @@ li:hover {
     display: flex;
     flex-direction: column;
     justify-content: space-between; }
+    @media (max-width: 962px) {
+      .hoodies__item:nth-of-type(4) {
+        min-height: 200px;
+        flex: 1; } }
     .hoodies__item:nth-of-type(4):hover {
       opacity: 1;
       color: rgba(217, 217, 217, 0.83);
@@ -302,6 +342,10 @@ li:hover {
     display: flex;
     flex-direction: column;
     justify-content: space-between; }
+    @media (max-width: 962px) {
+      .hoodies__item:nth-of-type(5) {
+        min-height: 200px;
+        flex: 1; } }
     .hoodies__item:nth-of-type(5):hover {
       opacity: 1;
       color: rgba(217, 217, 217, 0.83);
@@ -322,6 +366,10 @@ li:hover {
     display: flex;
     flex-direction: column;
     justify-content: space-between; }
+    @media (max-width: 962px) {
+      .hoodies__item:nth-of-type(6) {
+        min-height: 200px;
+        flex: 1; } }
     .hoodies__item:nth-of-type(6):hover {
       opacity: 1;
       color: rgba(217, 217, 217, 0.83);
@@ -330,12 +378,12 @@ li:hover {
 .shirts {
   flex-basis: 45%;
   height: 100%;
-  display: none;
+  display: flex;
   flex-wrap: wrap;
   justify-content: center; }
   @media (max-width: 962px) {
     .shirts {
-      height: 40%;
+      height: 20%;
       flex-basis: 90%; } }
   .shirts__title {
     font-size: 5em;
@@ -374,6 +422,10 @@ li:hover {
     display: flex;
     flex-direction: column;
     justify-content: space-between; }
+    @media (max-width: 962px) {
+      .shirts__item:nth-of-type(3) {
+        min-height: 200px;
+        flex: 1; } }
     .shirts__item:nth-of-type(3):hover {
       opacity: 1;
       color: rgba(217, 217, 217, 0.83);
@@ -395,6 +447,10 @@ li:hover {
     display: flex;
     flex-direction: column;
     justify-content: space-between; }
+    @media (max-width: 962px) {
+      .shirts__item:nth-of-type(4) {
+        min-height: 200px;
+        flex: 1; } }
     .shirts__item:nth-of-type(4):hover {
       opacity: 1;
       color: rgba(217, 217, 217, 0.83);
@@ -416,6 +472,10 @@ li:hover {
     display: flex;
     flex-direction: column;
     justify-content: space-between; }
+    @media (max-width: 962px) {
+      .shirts__item:nth-of-type(5) {
+        min-height: 200px;
+        flex: 1; } }
     .shirts__item:nth-of-type(5):hover {
       opacity: 1;
       color: rgba(217, 217, 217, 0.83);
@@ -437,6 +497,10 @@ li:hover {
     display: flex;
     flex-direction: column;
     justify-content: space-between; }
+    @media (max-width: 962px) {
+      .shirts__item:nth-of-type(6) {
+        min-height: 200px;
+        flex: 1; } }
     .shirts__item:nth-of-type(6):hover {
       opacity: 1;
       color: rgba(217, 217, 217, 0.83);
@@ -455,12 +519,15 @@ li:hover {
   justify-content: space-around;
   align-items: center;
   margin-bottom: 3%; }
+  @media (max-width: 1110px) {
+    .forum {
+      height: 100%; } }
   .forum__register {
     width: 500px;
     height: 400px;
-    display: none;
-    justify-content: space-around;
-    align-items: center; }
+    justify-content: center;
+    align-items: center;
+    display: flex; }
     .forum__register__btn {
       background-color: rgba(61, 125, 180, 0.9);
       border: none;
@@ -468,7 +535,10 @@ li:hover {
       width: 400px;
       height: 80px;
       font-size: 1.7em;
-      margin: 4%; }
+      margin: 3% auto; }
+      @media (max-width: 650px) {
+        .forum__register__btn {
+          width: 300px; } }
       .forum__register__btn:hover {
         background-color: rgba(198, 198, 198, 0.5);
         color: #33b48e; }
@@ -480,19 +550,22 @@ li:hover {
       color: rgba(61, 125, 180, 0.9);
       box-sizing: border-box;
       display: block;
-      width: 100%;
       padding: 16px;
       outline: 0;
-      margin: 4%;
+      margin: 3% auto;
       border-radius: 0;
-      border-style: none; }
+      border-style: none;
+      align-self: center; }
+      @media (max-width: 650px) {
+        .forum__register__email, .forum__register__password {
+          width: 300px; } }
       .forum__register__email:active, .forum__register__password:active {
         background-color: rgba(255, 255, 255, 0.28); }
   .forum__feed {
-    display: none;
     justify-content: center;
     align-items: center;
-    background-color: #feaecb; }
+    background-color: #feaecb;
+    width: 90%; }
     .forum__feed a {
       font-size: 1.2em; }
 

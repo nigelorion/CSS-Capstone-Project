@@ -9,6 +9,26 @@ $(document).ready(function(){
       }
     });
 
+    $(window).scroll(function () {
+      var scrollTop = $(window).scrollTop();
+      var height = $(window).height();
+      $('.header').css({
+          'opacity': ((height - scrollTop) / height)
+      });
+  });
+
+  $(window).scroll(function () {
+  
+      $(".fade").each(function () {
+          if (($(this).offset().top - $(window).scrollTop()) < 20) {
+              $(this).stop().fadeTo(100, 0);
+          } else {
+              $(this).stop().fadeTo('fast', 1);
+          }
+      });
+  });
+
+
   $('.home__top').click(function(event) {
     event.preventDefault();
 
@@ -26,28 +46,28 @@ $(document).ready(function(){
         $('#header__click--show').fadeOut(600);
       }
     });
-
-    $(window).scroll(function() {
-        if ($(this).scrollTop() > 2000) {
-          $('.hoodies').fadeIn(900).css("display", "flex");
-          $('.shirts').fadeIn(1400).css("display", "flex");
-        } if ($(this).scrollTop() < 2000) {
-          $('.hoodies').fadeOut(1000);
-          $('.shirts').fadeOut(1000);
-        }
-        if ($(this).scrollTop() > 800) {
-          $('.tape').fadeIn(900).css("display", "flex");
-        } if ($(this).scrollTop() < 800) {
-          $('.tape').fadeOut(1000);
-        }
-        if ($(this).scrollTop() > 2800) {
-          $('.forum__register').fadeIn(700).css("display", "flex");
-          $('.forum__feed').fadeIn(1500).css("display", "flex");
-        } if ($(this).scrollTop() < 2800) {
-          $('.forum__register').fadeOut(1000);
-          $('.forum__feed').fadeOut(1000);
-        }
-      });
+    //
+    // $(window).scroll(function() {
+    //     if ($(this).scrollTop() > 2000) {
+    //       $('.hoodies').fadeIn(900).css("display", "flex");
+    //       $('.shirts').fadeIn(1400).css("display", "flex");
+    //     } if ($(this).scrollTop() < 2000) {
+    //       $('.hoodies').fadeOut(1000);
+    //       $('.shirts').fadeOut(1000);
+    //     }
+    //     if ($(this).scrollTop() > 800) {
+    //       $('.tape').fadeIn(900).css("display", "flex");
+    //     } if ($(this).scrollTop() < 800) {
+    //       $('.tape').fadeOut(1000);
+    //     }
+    //     if ($(this).scrollTop() > 2800) {
+    //       $('.forum__register').fadeIn(700).css("display", "flex");
+    //       $('.forum__feed').fadeIn(1500).css("display", "flex");
+    //     } if ($(this).scrollTop() < 2800) {
+    //       $('.forum__register').fadeOut(1000);
+    //       $('.forum__feed').fadeOut(1000);
+    //     }
+    //   });
 
   $("a").on('click', function(event) {
 
