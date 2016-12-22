@@ -27,11 +27,14 @@
     align-items: center;
 
   }
+  @for $i from 1 through length($tape__images) {
+    &__item:nth-of-type(#{$i}) {
+      background-image: url(nth($tape__images, $i));
+    }
+  }
 
   &__item {
-    flex-basis: 44%;
-
-    background-image: url(../img/cassette.jpg);
+    flex-basis: 35%;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -42,6 +45,7 @@
     align-items: flex-end;
     flex-direction: row;
     transition: all ease-in-out 200ms;
+    opacity: .5;
     @media #{$md-brk} {
       flex-basis: 90%;
       height: 20%;
@@ -54,8 +58,9 @@
       margin: 20px;
     }
     &:hover {
-      filter: grayscale(70%);
-      flex-basis: 50%
+      filter: grayscale(80%);
+      flex-basis: 55%;
+      opacity: 1;
     }
     &:hover > &__info {
       opacity: 1;
@@ -116,9 +121,9 @@
     flex-basis: 90%;
   }
   &__title {
+    order: 5;
     font-size: 5em;
     flex-basis: 90%;
-    order: 5;
     text-align: center;
     margin-top: 20px;
   }
@@ -139,11 +144,13 @@
       background-color: rgba(194, 188, 188, 0.12);
       cursor: pointer;
     }
-
   }
-  @for $i from 3 through 6 {
-    &__item:nth-of-type(#{$i}) {
-      background-image: url(../img/hoodie-1.jpg);
+  // @for $i from 1 through 4 {
+  //   &__item:nth-of-type(#{$i + 2}) {
+  //     background-image: url(nth($hoodies__images, $i));
+  @for $i from 1 through length($hoodies__images) {
+    &__item:nth-of-type(#{$i + 2}) {
+      background-image: url(nth($hoodies__images, $i));
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
@@ -165,7 +172,7 @@
       &:hover {
         opacity: 1;
         color: rgba(217, 217, 217, 0.83);
-        flex-basis: 47%;
+        flex-basis: 55%;
       }
     }
   }
@@ -206,9 +213,9 @@
       cursor: pointer;
     }
   }
-  @for $i from 3 through 6 {
-    &__item:nth-of-type(#{$i}) {
-      background-image: url(../img/hoodie-2.jpg);
+  @for $i from 1 through length($shirts__images) {
+    &__item:nth-of-type(#{$i + 2}) {
+      background-image: url(nth($shirts__images, $i));
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
@@ -230,7 +237,7 @@
       &:hover {
         opacity: 1;
         color: rgba(217, 217, 217, 0.83);
-        flex-basis: 44%;
+        flex-basis: 55%;
         justify-content: center;
       }
     }
@@ -267,13 +274,14 @@
       height: 80px;
       font-size: 1.7em;
       margin: 3% auto;
+      transition: all ease-in-out 200ms;
       @media #{$sm-brk} {
         width: 300px;
 
       }
       &:hover {
         background-color: rgba(198, 198, 198, 0.5);
-        color: rgb(51, 180, 142);
+        color: rgb(51, 10, 12);
       }
     }
     &__email {
@@ -310,4 +318,30 @@
       font-size: 1.2em;
     }
   }
+}
+
+.sets {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  // align-items: center;
+  height: 100vh;
+  margin: 0 auto;
+  @media #{$md-brk} {
+    height: 100%;
+  }
+  &__vid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-basis: 45%;
+    & iframe {
+      // width: 100%;
+      // height: 100%;
+    }
+    @media #{$sm-brk} {
+      flex-basis: 90%;
+    }
+  }
+
 }

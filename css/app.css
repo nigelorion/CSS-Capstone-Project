@@ -183,9 +183,16 @@ li:hover {
       flex-basis: 90%;
       height: 100%;
       align-items: center; } }
+  .tape__item:nth-of-type(1) {
+    background-image: url("../img/cassette-1.jpg"); }
+  .tape__item:nth-of-type(2) {
+    background-image: url("../img/cassette-2.jpg"); }
+  .tape__item:nth-of-type(3) {
+    background-image: url("../img/cassette-3.jpg"); }
+  .tape__item:nth-of-type(4) {
+    background-image: url("../img/cassette-4.jpg"); }
   .tape__item {
-    flex-basis: 44%;
-    background-image: url(../img/cassette.jpg);
+    flex-basis: 35%;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -195,7 +202,8 @@ li:hover {
     justify-content: space-between;
     align-items: flex-end;
     flex-direction: row;
-    transition: all ease-in-out 200ms; }
+    transition: all ease-in-out 200ms;
+    opacity: .5; }
     @media (max-width: 962px) {
       .tape__item {
         flex-basis: 90%;
@@ -207,8 +215,9 @@ li:hover {
       transition: all ease-in-out 400ms;
       margin: 20px; }
     .tape__item:hover {
-      filter: grayscale(70%);
-      flex-basis: 50%; }
+      filter: grayscale(80%);
+      flex-basis: 55%;
+      opacity: 1; }
     .tape__item:hover > .tape__item__info {
       opacity: 1; }
 
@@ -258,9 +267,9 @@ li:hover {
     .hoodies {
       flex-basis: 90%; } }
   .hoodies__title {
+    order: 5;
     font-size: 5em;
     flex-basis: 90%;
-    order: 5;
     text-align: center;
     margin-top: 20px; }
   .hoodies__btn {
@@ -279,7 +288,7 @@ li:hover {
       background-color: rgba(194, 188, 188, 0.12);
       cursor: pointer; }
   .hoodies__item:nth-of-type(3) {
-    background-image: url(../img/hoodie-1.jpg);
+    background-image: url("../img/hoodie-1.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -301,9 +310,9 @@ li:hover {
     .hoodies__item:nth-of-type(3):hover {
       opacity: 1;
       color: rgba(217, 217, 217, 0.83);
-      flex-basis: 47%; }
+      flex-basis: 55%; }
   .hoodies__item:nth-of-type(4) {
-    background-image: url(../img/hoodie-1.jpg);
+    background-image: url("../img/hoodie-2.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -325,9 +334,9 @@ li:hover {
     .hoodies__item:nth-of-type(4):hover {
       opacity: 1;
       color: rgba(217, 217, 217, 0.83);
-      flex-basis: 47%; }
+      flex-basis: 55%; }
   .hoodies__item:nth-of-type(5) {
-    background-image: url(../img/hoodie-1.jpg);
+    background-image: url("../img/hoodie-3.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -349,9 +358,9 @@ li:hover {
     .hoodies__item:nth-of-type(5):hover {
       opacity: 1;
       color: rgba(217, 217, 217, 0.83);
-      flex-basis: 47%; }
+      flex-basis: 55%; }
   .hoodies__item:nth-of-type(6) {
-    background-image: url(../img/hoodie-1.jpg);
+    background-image: url("../img/hoodie-4.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -373,7 +382,7 @@ li:hover {
     .hoodies__item:nth-of-type(6):hover {
       opacity: 1;
       color: rgba(217, 217, 217, 0.83);
-      flex-basis: 47%; }
+      flex-basis: 55%; }
 
 .shirts {
   flex-basis: 45%;
@@ -407,7 +416,7 @@ li:hover {
       background-color: rgba(194, 188, 188, 0.12);
       cursor: pointer; }
   .shirts__item:nth-of-type(3) {
-    background-image: url(../img/hoodie-2.jpg);
+    background-image: url("../img/shirt-1.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -429,10 +438,10 @@ li:hover {
     .shirts__item:nth-of-type(3):hover {
       opacity: 1;
       color: rgba(217, 217, 217, 0.83);
-      flex-basis: 44%;
+      flex-basis: 55%;
       justify-content: center; }
   .shirts__item:nth-of-type(4) {
-    background-image: url(../img/hoodie-2.jpg);
+    background-image: url("../img/shirt-2.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -454,10 +463,10 @@ li:hover {
     .shirts__item:nth-of-type(4):hover {
       opacity: 1;
       color: rgba(217, 217, 217, 0.83);
-      flex-basis: 44%;
+      flex-basis: 55%;
       justify-content: center; }
   .shirts__item:nth-of-type(5) {
-    background-image: url(../img/hoodie-2.jpg);
+    background-image: url("../img/shirt-3.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -479,10 +488,10 @@ li:hover {
     .shirts__item:nth-of-type(5):hover {
       opacity: 1;
       color: rgba(217, 217, 217, 0.83);
-      flex-basis: 44%;
+      flex-basis: 55%;
       justify-content: center; }
   .shirts__item:nth-of-type(6) {
-    background-image: url(../img/hoodie-2.jpg);
+    background-image: url("../img/shirt-4.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -504,7 +513,7 @@ li:hover {
     .shirts__item:nth-of-type(6):hover {
       opacity: 1;
       color: rgba(217, 217, 217, 0.83);
-      flex-basis: 44%;
+      flex-basis: 55%;
       justify-content: center; }
 
 .forum {
@@ -535,13 +544,14 @@ li:hover {
       width: 400px;
       height: 80px;
       font-size: 1.7em;
-      margin: 3% auto; }
+      margin: 3% auto;
+      transition: all ease-in-out 200ms; }
       @media (max-width: 650px) {
         .forum__register__btn {
           width: 300px; } }
       .forum__register__btn:hover {
         background-color: rgba(198, 198, 198, 0.5);
-        color: #33b48e; }
+        color: #330a0c; }
     .forum__register__email, .forum__register__password {
       height: 40px;
       width: 400px;
@@ -568,6 +578,24 @@ li:hover {
     width: 90%; }
     .forum__feed a {
       font-size: 1.2em; }
+
+.sets {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 100vh;
+  margin: 0 auto; }
+  @media (max-width: 962px) {
+    .sets {
+      height: 100%; } }
+  .sets__vid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-basis: 45%; }
+    @media (max-width: 650px) {
+      .sets__vid {
+        flex-basis: 90%; } }
 
 .footer {
   height: 200px;
